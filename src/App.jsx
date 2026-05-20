@@ -19,15 +19,30 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_ITEMS = [
-  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "tall" },
-  { id: 2, color: "#e8d5c4", label: "Champagne", size: "normal" },
-  { id: 3, color: "#c9a9b4", label: "Mauve Dreams", size: "normal" },
-  { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "tall" },
-  { id: 5, color: "#d4b8c7", label: "Rose Quartz", size: "normal" },
-  { id: 6, color: "#e6cec8", label: "Terracotta Soft", size: "normal" },
-  { id: 7, color: "#f0dbd8", label: "Petal Pink", size: "tall" },
-  { id: 8, color: "#c8b4bc", label: "Dusty Lilac", size: "normal" },
-  { id: 9, color: "#edddd4", label: "Warm Nude", size: "normal" },
+  {
+    id: 1,
+    image: "/public/images/unha.jpg",
+    label: "Nude Rosé",
+    size: "tall"
+  },
+  {
+    id: 2,
+    image: "/public/images/unha1.jpg",
+    label: "Champagne",
+    size: "normal"
+  },
+  {
+    id: 3,
+    image: "/public/images/unha2.jpg",
+    label: "Mauve Dreams",
+    size: "normal"
+  },
+  {
+    id: 4,
+    image: "/public/images/unha3.jpg",
+    label: "Blush Bridal",
+    size: "tall"
+  },
 ];
 
 const INSTAGRAM_ITEMS = [
@@ -364,9 +379,15 @@ export default function NailStudio() {
           {GALLERY_ITEMS.map((item, i) => (
             <div key={item.id} className="gallery-item" style={{ aspectRatio: item.size === "tall" ? "3/4" : "1/1" }} onClick={() => setLightbox(item)}>
               <div className="nail-placeholder" style={{ width: "100%", height: "100%", background: `linear-gradient(135deg, ${item.color} 0%, ${item.color}99 100%)`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16 }}>
-                <div style={{ width: "50%", height: "80%" }}>
-                  <NailIllustration color={item.color === "#f4c2cc" ? "#e8a0b0" : item.color} />
-                </div>
+                <img
+                src={item.image}
+                 alt={item.label}
+                 style={{
+                 width: "100%",
+                 height: "100%",
+                 objectFit: "cover"
+                }}
+/>
               </div>
               <div className="gallery-overlay">
                 <div>
