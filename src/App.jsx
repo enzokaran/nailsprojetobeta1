@@ -21,25 +21,25 @@ const TESTIMONIALS = [
 const GALLERY_ITEMS = [
   {
     id: 1,
-    image: "/public/images/unha.jpg",
+    image: "/public/images/unha.png",
     label: "Nude Rosé",
     size: "tall"
   },
   {
     id: 2,
-    image: "/public/images/unha1.jpg",
+    image: "/public/images/unha1.png",
     label: "Champagne",
     size: "normal"
   },
   {
     id: 3,
-    image: "/public/images/unha2.jpg",
+    image: "/public/images/unha2.png",
     label: "Mauve Dreams",
     size: "normal"
   },
   {
     id: 4,
-    image: "/public/images/unha3.jpg",
+    image: "/public/images/unha3.png",
     label: "Blush Bridal",
     size: "tall"
   },
