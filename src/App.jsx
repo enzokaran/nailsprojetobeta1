@@ -19,30 +19,15 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_ITEMS = [
-  {
-    id: 1,
-    image: "/public/images/unha.png",
-    label: "Nude Rosé",
-    size: "tall"
-  },
-  {
-    id: 2,
-    image: "/public/images/unha 1.png",
-    label: "Champagne",
-    size: "normal"
-  },
-  {
-    id: 3,
-    image: "/public/images/unha2.png",
-    label: "Mauve Dreams",
-    size: "normal"
-  },
-  {
-    id: 4,
-    image: "/public/images/unha3.png",
-    label: "Blush Bridal",
-    size: "tall"
-  },
+  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "tall", img: "/imagens/unha.png" },
+  { id: 2, color: "#e8d5c4", label: "Champagne", size: "normal", img: "/imagens/unha1.png" },
+  { id: 3, color: "#c9a9b4", label: "Mauve Dreams", size: "normal", img: "/imagens/unha2.png" },
+  { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "tall", img: "/imagens/unha3.png" },
+  { id: 5, color: "#d4b8c7", label: "Rose Quartz", size: "normal", img: "/imagens/unha.png" },
+  { id: 6, color: "#e6cec8", label: "Terracotta Soft", size: "normal", img: "/imagens/unha1.png" },
+  { id: 7, color: "#f0dbd8", label: "Petal Pink", size: "tall", img: "/imagens/unha2.png" },
+  { id: 8, color: "#c8b4bc", label: "Dusty Lilac", size: "normal", img: "/imagens/unha3.png" },
+  { id: 9, color: "#edddd4", label: "Warm Nude", size: "normal", img: "/imagens/unha.png" },
 ];
 
 const INSTAGRAM_ITEMS = [
@@ -378,17 +363,7 @@ export default function NailStudio() {
         <div className="gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 3, padding: "0 8vw" }}>
           {GALLERY_ITEMS.map((item, i) => (
             <div key={item.id} className="gallery-item" style={{ aspectRatio: item.size === "tall" ? "3/4" : "1/1" }} onClick={() => setLightbox(item)}>
-              <div className="nail-placeholder" style={{ width: "100%", height: "100%", background: `linear-gradient(135deg, ${item.color} 0%, ${item.color}99 100%)`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16 }}>
-                <img
-                src={item.image}
-                 alt={item.label}
-                 style={{
-                 width: "100%",
-                 height: "100%",
-                 objectFit: "cover"
-                }}
-/>
-              </div>
+              <img src={item.img} alt={item.label} className="nail-placeholder" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
               <div className="gallery-overlay">
                 <div>
                   <div className="gallery-overlay-text">{item.label}</div>
@@ -399,7 +374,7 @@ export default function NailStudio() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 48 }}>
-          <a href="https://www.instagram.com/enzo_.krn/" target="_blank" rel="noopener" className="btn-outline">Ver Mais no Instagram</a>
+          <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" className="btn-outline">Ver Mais no Instagram</a>
         </div>
       </section>
 
@@ -515,7 +490,7 @@ export default function NailStudio() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 40 }}>
-          <a href="https://www.instagram.com/enzo_.krn/" target="_blank" rel="noopener" className="btn-outline">Seguir no Instagram</a>
+          <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" className="btn-outline">Seguir no Instagram</a>
         </div>
       </section>
 
@@ -565,7 +540,7 @@ export default function NailStudio() {
           <div>
             <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#c49a6c", textTransform: "uppercase", marginBottom: 24 }}>Contato</div>
             <a href={WA_LINK} target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>WhatsApp</a>
-            <a href="https://www.instagram.com/enzo_.krn/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
+            <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
             <div className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.4)", fontWeight: 300, lineHeight: 1.6 }}>Florianópolis, SC</div>
           </div>
         </div>
@@ -587,10 +562,8 @@ export default function NailStudio() {
       {/* LIGHTBOX */}
       {lightbox && (
         <div className="lightbox" onClick={() => setLightbox(null)}>
-          <div style={{ position: "relative", background: lightbox.color, width: "min(400px, 85vw)", aspectRatio: "3/4", display: "flex", alignItems: "center", justifyContent: "center" }} onClick={e => e.stopPropagation()}>
-            <div style={{ width: "60%", height: "70%" }}>
-              <NailIllustration color={lightbox.color} />
-            </div>
+          <div style={{ position: "relative", width: "min(400px, 85vw)", aspectRatio: "3/4", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }} onClick={e => e.stopPropagation()}>
+            <img src={lightbox.img} alt={lightbox.label} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             <div style={{ position: "absolute", bottom: 24, left: 0, right: 0, textAlign: "center" }}>
               <div style={{ fontFamily: "'Jost',sans-serif", fontSize: 12, letterSpacing: 3, color: "#2a1a1f", textTransform: "uppercase", opacity: 0.7 }}>{lightbox.label}</div>
             </div>
