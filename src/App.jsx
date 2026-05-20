@@ -145,7 +145,7 @@ export default function NailStudio() {
     setMenuOpen(false);
   };
 
-  const WA_LINK = "https://wa.me/5548999999999?text=Olá! Gostaria de agendar um horário.";
+  const WA_LINK = "https://wa.me/554898008162?text=Olá! Gostaria de agendar um horário.";
 
   return (
     <div style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", background: "#fdfaf8", color: "#2a1a1f", overflowX: "hidden" }}>
@@ -378,7 +378,7 @@ export default function NailStudio() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 48 }}>
-          <a href="https://instagram.com" target="_blank" rel="noopener" className="btn-outline">Ver Mais no Instagram</a>
+          <a href="https://www.instagram.com/enzo_.krn/" target="_blank" rel="noopener" className="btn-outline">Ver Mais no Instagram</a>
         </div>
       </section>
 
@@ -494,7 +494,7 @@ export default function NailStudio() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 40 }}>
-          <a href="https://instagram.com" target="_blank" rel="noopener" className="btn-outline">Seguir no Instagram</a>
+          <a href="https://www.instagram.com/enzo_.krn/" target="_blank" rel="noopener" className="btn-outline">Seguir no Instagram</a>
         </div>
       </section>
 
@@ -544,7 +544,7 @@ export default function NailStudio() {
           <div>
             <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#c49a6c", textTransform: "uppercase", marginBottom: 24 }}>Contato</div>
             <a href={WA_LINK} target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>WhatsApp</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
+            <a href="https://www.instagram.com/enzo_.krn/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
             <div className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.4)", fontWeight: 300, lineHeight: 1.6 }}>Florianópolis, SC</div>
           </div>
         </div>
