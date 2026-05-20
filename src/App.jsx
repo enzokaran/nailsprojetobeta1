@@ -27,7 +27,7 @@ const GALLERY_ITEMS = [
   },
   {
     id: 2,
-    image: "/public/images/unha1.png",
+    image: "/public/images/unha 1.png",
     label: "Champagne",
     size: "normal"
   },
