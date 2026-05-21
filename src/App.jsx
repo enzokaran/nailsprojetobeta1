@@ -477,14 +477,14 @@ export default function NailStudio() {
         <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 60 }}>
           <div>
             <div style={{ fontSize: 24, fontWeight: 300, letterSpacing: 6, color: "#fdfaf8", marginBottom: 4 }}>By Manu Nails</div>
-            <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Nail Studio</div>
+            <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>By Manu Nails</div>
             <p className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", fontWeight: 300, lineHeight: 1.8, maxWidth: 260 }}>
               Arte e sofisticação em cada detalhe. Porque você merece o melhor.
             </p>
           </div>
           <div>
             <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Serviços</div>
-            {["Banho em Gel", "Fibra de Vidro", "Nail Art", "Esmaltação", "Manutenção"].map(s => (
+            {["Molde f1", "", "Esmaltação em gel", "Esmaltação tradicional", "Manutenção", "Pedicure"].map(s => (
               <div key={s} className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", marginBottom: 12, fontWeight: 300 }}>{s}</div>
             ))}
           </div>
@@ -500,8 +500,8 @@ export default function NailStudio() {
           <div>
             <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Contato</div>
             <a href={WA_LINK} target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.5)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>WhatsApp</a>
-            <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.5)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
-            <div className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", fontWeight: 300, lineHeight: 1.6 }}>Florianópolis, SC</div>
+            <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.5)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>_bymanunailss</a>
+            <div className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", fontWeight: 300, lineHeight: 1.6 }}>Imaruí, SC</div>
           </div>
         </div>
 
