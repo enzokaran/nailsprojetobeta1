@@ -17,13 +17,13 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_ITEMS = [
-  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "tall", img: "/imagens/unha.png" },
+  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "normal", img: "/imagens/unha.png" },
   { id: 2, color: "#e8d5c4", label: "Champagne", size: "normal", img: "/imagens/unha1.png" },
   { id: 3, color: "#c9a9b4", label: "Mauve Dreams", size: "normal", img: "/imagens/unha2.png" },
-  { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "tall", img: "/imagens/unha3.png" },
+  { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "normal", img: "/imagens/unha3.png" },
   { id: 5, color: "#d4b8c7", label: "Rose Quartz", size: "normal", img: "/imagens/unha.png" },
   { id: 6, color: "#e6cec8", label: "Terracotta Soft", size: "normal", img: "/imagens/unha1.png" },
-  { id: 7, color: "#f0dbd8", label: "Petal Pink", size: "tall", img: "/imagens/unha2.png" },
+  { id: 7, color: "#f0dbd8", label: "Petal Pink", size: "normal", img: "/imagens/unha2.png" },
   { id: 8, color: "#c8b4bc", label: "Dusty Lilac", size: "normal", img: "/imagens/unha3.png" },
   { id: 9, color: "#edddd4", label: "Warm Nude", size: "normal", img: "/imagens/unha.png" },
 ];
@@ -376,7 +376,7 @@ export default function NailStudio() {
       <section id="galeria" style={{ padding: "0 0 120px" }}>
         <div style={{ padding: "0 8vw 56px", textAlign: "center" }}>
           <div className="section-eyebrow">Galeria</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
             <em>Inspiração</em> para<br />cada ocasião
           </h2>
           <div className="divider" />
@@ -451,7 +451,7 @@ export default function NailStudio() {
       <section style={{ padding: "120px 8vw", background: "#fdfaf8" }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <div className="section-eyebrow">Depoimentos</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
             O que nossas<br /><em>clientes dizem</em>
           </h2>
           <div className="divider" />
