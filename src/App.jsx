@@ -342,7 +342,30 @@ export default function NailStudio() {
                   <div style={{ fontSize: 24, fontWeight: 300, color: "#5a2a3a" }}>{s.price}</div>
                   <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase", marginTop: 2 }}>{s.duration}</div>
                 </div>
-                <a href={`https://wa.me/554898008162?text=${encodeURIComponent(s.wa)}`} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#d4789a", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #d4789a", paddingBottom: 2 }}>Agendar →</a>
+                <a
+                  href={`https://wa.me/554896344186?text=${encodeURIComponent(s.wa)}`}
+                  target="_blank"
+                  rel="noopener"
+                  style={{
+                    display: "inline-block",
+                    background: "#d4789a",
+                    color: "#fdfaf8",
+                    fontFamily: "'Jost', sans-serif",
+                    fontSize: 10,
+                    fontWeight: 500,
+                    letterSpacing: 2,
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    padding: "10px 20px",
+                    cursor: "pointer",
+                    transition: "background 0.3s ease, transform 0.2s ease",
+                    userSelect: "none",
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = "#b0607c"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = "#d4789a"; e.currentTarget.style.transform = "none"; }}
+                >
+                  Agendar
+                </a>
               </div>
             </div>
           ))}
