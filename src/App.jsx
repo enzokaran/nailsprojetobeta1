@@ -17,7 +17,7 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_ITEMS = [
-  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "tall", img: "/imagens/unha.png" },
+  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "normal", img: "/imagens/unha.png" },
   { id: 2, color: "#e8d5c4", label: "Champagne", size: "normal", img: "/imagens/unha1.png" },
   { id: 3, color: "#c9a9b4", label: "Mauve Dreams", size: "normal", img: "/imagens/unha2.png" },
   { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "tall", img: "/imagens/unha3.png" },
@@ -108,7 +108,7 @@ function StarRating({ count = 5 }) {
     <div style={{ display: "flex", gap: 3, marginBottom: 12 }}>
       {Array.from({ length: count }).map((_, i) => (
         <svg key={i} width="14" height="14" viewBox="0 0 14 14">
-          <polygon points="7,1 8.8,5.6 14,5.6 9.8,8.6 11.6,13 7,10.1 2.4,13 4.2,8.6 0,5.6 5.2,5.6" fill="#c49a6c" />
+          <polygon points="7,1 8.8,5.6 14,5.6 9.8,8.6 11.6,13 7,10.1 2.4,13 4.2,8.6 0,5.6 5.2,5.6" fill="#d4789a" />
         </svg>
       ))}
     </div>
@@ -144,45 +144,46 @@ export default function NailStudio() {
   };
 
   const WA_LINK = "https://wa.me/554896344186?text=Olá! Gostaria de agendar um horário.";
+  const waService = (name) => `https://wa.me/554896344186?text=Olá! Gostaria de agendar um horário de ${name}. Poderia me informar a disponibilidade?`;
 
   return (
-    <div style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", background: "#fdfaf8", color: "#fdfaf8", overflowX: "hidden" }}>
+    <div style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", background: "#fdfaf8", color: "#5a2a3a", overflowX: "hidden" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
-        ::selection { background: #f4c2cc; color: #f0d2d0; }
+        ::selection { background: #f4c2cc; color: #5a2a3a; }
         .sans { font-family: 'Jost', system-ui, sans-serif; }
         .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
         .fade-up.visible { opacity: 1; transform: none; }
-        .btn-primary { background: #f0d2d0; color: #fdfaf8; border: none; padding: 16px 36px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
-        .btn-primary:hover { background: #c49a6c; transform: translateY(-2px); }
-        .btn-outline { background: transparent; color: #f0d2d0; border: 1px solid rgba(42,26,31,0.3); padding: 14px 32px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
-        .btn-outline:hover { border-color: #f0d2d0; background: #f0d2d0; color: #fdfaf8; }
-        .service-card { background: #fff; padding: 40px 32px; border: 1px solid rgba(42,26,31,0.08); transition: all 0.4s ease; cursor: default; position: relative; overflow: hidden; }
-        .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(196,154,108,0.04) 0%, rgba(244,194,204,0.04) 100%); opacity: 0; transition: opacity 0.4s; }
-        .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(42,26,31,0.1); border-color: rgba(196,154,108,0.3); }
+        .btn-primary { background: #c4788e; color: #fdfaf8; border: none; padding: 16px 36px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
+        .btn-primary:hover { background: #b0607c; transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: #5a2a3a; border: 1px solid rgba(90,42,58,0.25); padding: 14px 32px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
+        .btn-outline:hover { border-color: #c4788e; background: #c4788e; color: #fdfaf8; }
+        .service-card { background: #fff; padding: 40px 32px; border: 1px solid rgba(196,120,142,0.12); transition: all 0.4s ease; cursor: default; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(244,194,204,0.07) 0%, rgba(253,240,244,0.07) 100%); opacity: 0; transition: opacity 0.4s; }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(196,120,142,0.13); border-color: rgba(196,120,142,0.3); }
         .service-card:hover::before { opacity: 1; }
         .gallery-item { overflow: hidden; cursor: pointer; position: relative; }
         .gallery-item img, .gallery-item .nail-placeholder { transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
         .gallery-item:hover .nail-placeholder { transform: scale(1.05); }
-        .gallery-overlay { position: absolute; inset: 0; background: rgba(42,26,31,0); transition: background 0.4s; display: flex; align-items: center; justify-content: center; }
-        .gallery-item:hover .gallery-overlay { background: rgba(42,26,31,0.35); }
+        .gallery-overlay { position: absolute; inset: 0; background: rgba(90,42,58,0); transition: background 0.4s; display: flex; align-items: center; justify-content: center; }
+        .gallery-item:hover .gallery-overlay { background: rgba(90,42,58,0.3); }
         .gallery-overlay-text { color: white; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; opacity: 0; transform: translateY(8px); transition: all 0.3s ease 0.1s; }
         .gallery-item:hover .gallery-overlay-text { opacity: 1; transform: none; }
-        .testimonial-card { background: #fff; padding: 48px 40px; border: 1px solid rgba(42,26,31,0.08); }
+        .testimonial-card { background: #fff; padding: 48px 40px; border: 1px solid rgba(196,120,142,0.12); }
         .nav-link { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: inherit; text-decoration: none; opacity: 0.7; transition: opacity 0.3s; cursor: pointer; background: none; border: none; }
         .nav-link:hover { opacity: 1; }
         .wa-float { position: fixed; bottom: 32px; right: 32px; z-index: 1000; width: 58px; height: 58px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(37,211,102,0.4); cursor: pointer; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; animation: waPulse 2.5s ease-in-out infinite; }
         .wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(37,211,102,0.5); animation: none; }
         @keyframes waPulse { 0%,100%{ box-shadow: 0 8px 32px rgba(37,211,102,0.4); } 50%{ box-shadow: 0 8px 48px rgba(37,211,102,0.6); } }
-        .divider { width: 40px; height: 1px; background: linear-gradient(90deg, transparent, #c49a6c, transparent); margin: 20px auto; }
-        .section-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #c49a6c; margin-bottom: 16px; }
+        .divider { width: 40px; height: 1px; background: linear-gradient(90deg, transparent, #d4789a, transparent); margin: 20px auto; }
+        .section-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #d4789a; margin-bottom: 16px; }
         .hero-tag { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(253,250,248,0.7); }
         .insta-item { overflow: hidden; aspect-ratio: 1; cursor: pointer; position: relative; }
-        .insta-overlay { position: absolute; inset: 0; background: rgba(42,26,31,0); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
-        .insta-item:hover .insta-overlay { background: rgba(42,26,31,0.4); }
+        .insta-overlay { position: absolute; inset: 0; background: rgba(90,42,58,0); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+        .insta-item:hover .insta-overlay { background: rgba(90,42,58,0.35); }
         .insta-likes { color: white; font-family: 'Jost', sans-serif; font-size: 13px; opacity: 0; transition: opacity 0.3s; }
         .insta-item:hover .insta-likes { opacity: 1; }
         @media(max-width: 768px) {
@@ -200,38 +201,38 @@ export default function NailStudio() {
         .hero-line-inner { display: block; }
         .scroll-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .scroll-reveal.revealed { opacity: 1; transform: none; }
-        .gold-line { width: 0; height: 1px; background: #c49a6c; transition: width 1s ease 0.5s; }
+        .gold-line { width: 0; height: 1px; background: #d4789a; transition: width 1s ease 0.5s; }
         .gold-line.visible { width: 60px; }
-        .tag-pill { display: inline-block; background: rgba(196,154,108,0.1); border: 1px solid rgba(196,154,108,0.3); color: #c49a6c; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; }
+        .tag-pill { display: inline-block; background: rgba(212,120,154,0.08); border: 1px solid rgba(212,120,154,0.25); color: #d4789a; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; }
         .mobile-menu { position: fixed; inset: 0; background: #fdfaf8; z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
         .mobile-menu.open { transform: none; }
-        .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000; display: flex; align-items: center; justify-content: center; }
+        .lightbox { position: fixed; inset: 0; background: rgba(90,42,58,0.92); z-index: 2000; display: flex; align-items: center; justify-content: center; }
       `}</style>
 
       {/* NAVBAR */}
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 500,
         padding: "20px 48px",
-        background: scrolled ? "rgba(253,250,248,0.95)" : "transparent",
+        background: scrolled ? "rgba(253,250,248,0.97)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(42,26,31,0.08)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(196,120,142,0.1)" : "none",
         transition: "all 0.4s ease",
         display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
         <div onClick={() => scrollTo("hero")} style={{ cursor: "pointer" }}>
-          <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 6, color: scrolled ? "#fdfaf8" : "#fdfaf8", lineHeight: 1 }}>LUNNA</div>
-          <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: scrolled ? "#c49a6c" : "rgba(253,250,248,0.8)", textTransform: "uppercase", marginTop: 2 }}>Nail Studio</div>
+          <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 6, color: scrolled ? "#5a2a3a" : "#fdfaf8", lineHeight: 1 }}>LUNNA</div>
+          <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: scrolled ? "#d4789a" : "rgba(253,250,248,0.8)", textTransform: "uppercase", marginTop: 2 }}>Nail Studio</div>
         </div>
 
         <div style={{ display: "flex", gap: 36, alignItems: "center" }} className="desktop-nav">
           {NAV_LINKS.map(l => (
-            <button key={l} className="nav-link" onClick={() => scrollTo(l.toLowerCase().replace("í","i").replace("ç","c").replace("ê","e"))} style={{ color: scrolled ? "#2a1a1f" : "rgba(253,250,248,0.85)" }}>{l}</button>
+            <button key={l} className="nav-link" onClick={() => scrollTo(l.toLowerCase().replace("í","i").replace("ç","c").replace("ê","e"))} style={{ color: scrolled ? "#5a2a3a" : "rgba(253,250,248,0.85)" }}>{l}</button>
           ))}
           <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary" style={{ padding: "10px 24px", fontSize: 11 }}>WhatsApp</a>
         </div>
 
         <button onClick={() => setMenuOpen(v => !v)} style={{ display: "none", background: "none", border: "none", cursor: "pointer", flexDirection: "column", gap: 5 }} className="menu-btn" aria-label="Menu">
-          {[0,1,2].map(i => <span key={i} style={{ display: "block", width: 24, height: 1, background: scrolled ? "#fdfaf8" : "#fdfaf8", transition: "all 0.3s" }} />)}
+          {[0,1,2].map(i => <span key={i} style={{ display: "block", width: 24, height: 1, background: scrolled ? "#5a2a3a" : "#fdfaf8", transition: "all 0.3s" }} />)}
         </button>
 
         <style>{`.desktop-nav { display: flex !important; } .menu-btn { display: none !important; } @media(max-width: 900px){ .desktop-nav { display: none !important; } .menu-btn { display: flex !important; } }`}</style>
@@ -239,19 +240,19 @@ export default function NailStudio() {
 
       {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <button onClick={() => setMenuOpen(false)} style={{ position: "absolute", top: 24, right: 24, background: "none", border: "none", fontSize: 28, cursor: "pointer", color: "#fdfaf8" }}>×</button>
+        <button onClick={() => setMenuOpen(false)} style={{ position: "absolute", top: 24, right: 24, background: "none", border: "none", fontSize: 28, cursor: "pointer", color: "#5a2a3a" }}>×</button>
         {NAV_LINKS.map(l => (
-          <button key={l} onClick={() => scrollTo(l.toLowerCase())} style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 32, fontWeight: 300, letterSpacing: 4, background: "none", border: "none", cursor: "pointer", color: "#fdfaf8" }}>{l}</button>
+          <button key={l} onClick={() => scrollTo(l.toLowerCase())} style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 32, fontWeight: 300, letterSpacing: 4, background: "none", border: "none", cursor: "pointer", color: "#5a2a3a" }}>{l}</button>
         ))}
         <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary">WhatsApp</a>
       </div>
 
       {/* HERO */}
-      <section id="início" ref={heroRef} style={{ minHeight: "100vh", position: "relative", display: "flex", alignItems: "center", overflow: "hidden", background: "linear-gradient(135deg, #f0c3be 0%, #fdfaf8 40%, #f0c3be 100%)" }}>
+      <section id="início" ref={heroRef} style={{ minHeight: "100vh", position: "relative", display: "flex", alignItems: "center", overflow: "hidden", background: "linear-gradient(135deg, #b06080 0%, #d4789a 40%, #c4688a 100%)" }}>
         {/* Decorative background */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-          <div style={{ position: "absolute", width: 600, height: 600, right: -100, top: -100, borderRadius: "50%", background: "radial-gradient(circle, rgba(196,154,108,0.12) 0%, transparent 70%)" }} />
-          <div style={{ position: "absolute", width: 400, height: 400, left: -50, bottom: -50, borderRadius: "50%", background: "radial-gradient(circle, rgba(244,194,204,0.08) 0%, transparent 70%)" }} />
+          <div style={{ position: "absolute", width: 600, height: 600, right: -100, top: -100, borderRadius: "50%", background: "radial-gradient(circle, rgba(253,240,244,0.18) 0%, transparent 70%)" }} />
+          <div style={{ position: "absolute", width: 400, height: 400, left: -50, bottom: -50, borderRadius: "50%", background: "radial-gradient(circle, rgba(253,250,248,0.12) 0%, transparent 70%)" }} />
           <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)" }} />
         </div>
 
@@ -275,7 +276,7 @@ export default function NailStudio() {
           </h1>
 
           <div style={{ opacity: heroVisible ? 1 : 0, transition: "opacity 1s ease 0.6s" }}>
-            <div style={{ width: 60, height: 1, background: "linear-gradient(90deg, #c49a6c, rgba(196,154,108,0.3))", margin: "28px 0" }} />
+            <div style={{ width: 60, height: 1, background: "linear-gradient(90deg, rgba(253,250,248,0.8), rgba(253,250,248,0.2))", margin: "28px 0" }} />
           </div>
 
           <p className="sans" style={{
@@ -289,7 +290,7 @@ export default function NailStudio() {
             display: "flex", gap: 16, flexWrap: "wrap",
             opacity: heroVisible ? 1 : 0, transform: heroVisible ? "none" : "translateY(20px)", transition: "all 0.8s ease 0.9s"
           }}>
-            <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary" style={{ background: "#c49a6c" }}>Agendar Horário</a>
+            <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary" style={{ background: "rgba(253,250,248,0.18)", backdropFilter: "blur(8px)", border: "1px solid rgba(253,250,248,0.4)" }}>Agendar Horário</a>
             <button onClick={() => scrollTo("galeria")} className="btn-outline" style={{ color: "#fdfaf8", borderColor: "rgba(253,250,248,0.3)" }}>Ver Galeria</button>
           </div>
 
@@ -311,9 +312,9 @@ export default function NailStudio() {
       </section>
 
       {/* BRAND BAR */}
-      <div style={{ background: "#fdfaf8", padding: "20px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 64, overflowX: "auto" }}>
+      <div style={{ background: "linear-gradient(90deg, #c4788e, #d4899a, #c4788e)", padding: "20px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 64, overflowX: "auto" }}>
         {["Técnicas Exclusivas", "✦", "Produtos Premium", "✦", "Atendimento Personalizado", "✦", "Ambiente Refinado"].map((t, i) => (
-          <span key={i} className="sans" style={{ fontSize: 10, letterSpacing: 3, color: i % 2 === 1 ? "#c49a6c" : "rgba(253,250,248,0.5)", textTransform: "uppercase", whiteSpace: "nowrap" }}>{t}</span>
+          <span key={i} className="sans" style={{ fontSize: 10, letterSpacing: 3, color: i % 2 === 1 ? "rgba(253,250,248,0.9)" : "rgba(253,250,248,0.65)", textTransform: "uppercase", whiteSpace: "nowrap" }}>{t}</span>
         ))}
       </div>
 
@@ -325,7 +326,7 @@ export default function NailStudio() {
             Experiência<br /><em>Completa em Beleza</em>
           </h2>
           <div className="divider" />
-          <p className="sans" style={{ color: "#7a5a60", fontSize: 15, fontWeight: 300, maxWidth: 480, margin: "0 auto", lineHeight: 1.8 }}>
+          <p className="sans" style={{ color: "#9a6070", fontSize: 15, fontWeight: 300, maxWidth: 480, margin: "0 auto", lineHeight: 1.8 }}>
             Cada serviço é realizado com técnica apurada, produtos selecionados e total atenção aos detalhes.
           </p>
         </div>
@@ -333,15 +334,15 @@ export default function NailStudio() {
         <div className="services-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 2 }}>
           {SERVICES.map((s, i) => (
             <div key={i} className="service-card" style={{ animationDelay: `${i * 0.1}s` }}>
-              <div style={{ fontSize: 24, color: "#c49a6c", marginBottom: 20, lineHeight: 1 }}>{s.icon}</div>
+              <div style={{ fontSize: 24, color: "#d4789a", marginBottom: 20, lineHeight: 1 }}>{s.icon}</div>
               <h3 style={{ fontSize: 20, fontWeight: 400, marginBottom: 12, letterSpacing: 0.5 }}>{s.name}</h3>
-              <p className="sans" style={{ fontSize: 13, color: "#7a5a60", fontWeight: 300, lineHeight: 1.7, marginBottom: 24 }}>{s.desc}</p>
+              <p className="sans" style={{ fontSize: 13, color: "#9a6070", fontWeight: 300, lineHeight: 1.7, marginBottom: 24 }}>{s.desc}</p>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                 <div>
-                  <div style={{ fontSize: 24, fontWeight: 300, color: "#2a1a1f" }}>{s.price}</div>
-                  <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "#c49a6c", textTransform: "uppercase", marginTop: 2 }}>{s.duration}</div>
+                  <div style={{ fontSize: 24, fontWeight: 300, color: "#5a2a3a" }}>{s.price}</div>
+                  <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase", marginTop: 2 }}>{s.duration}</div>
                 </div>
-                <a href={WA_LINK} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#c49a6c", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #c49a6c", paddingBottom: 2 }}>Agendar →</a>
+                <a href={waService(s.name)} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#d4789a", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #d4789a", paddingBottom: 2 }}>Agendar →</a>
               </div>
             </div>
           ))}
@@ -377,46 +378,46 @@ export default function NailStudio() {
       </section>
 
       {/* ABOUT */}
-      <section id="sobre" style={{ background: "#f0d2d0", padding: "120px 8vw" }}>
+      <section id="sobre" style={{ background: "linear-gradient(135deg, #c4788e 0%, #d4899a 100%)", padding: "120px 8vw" }}>
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           {/* Portrait placeholder */}
           <div style={{ position: "relative" }}>
-            <div style={{ aspectRatio: "4/5", background: "linear-gradient(145deg, #fdfaf8 0%, #7e235b 100%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+            <div style={{ aspectRatio: "4/5", background: "linear-gradient(145deg, #b06080 0%, #c4788e 100%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
               <div style={{ width: "65%", opacity: 0.85 }}>
                 <HandIllustration />
               </div>
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(42,26,31,0.9) 0%, transparent 60%)", padding: "40px 36px 36px" }}>
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(90,42,58,0.85) 0%, transparent 60%)", padding: "40px 36px 36px" }}>
                 <div style={{ color: "#fdfaf8", fontSize: 26, fontWeight: 300, fontStyle: "italic" }}>Lunna Oliveira</div>
-                <div className="sans" style={{ color: "#c49a6c", fontSize: 10, letterSpacing: 3, textTransform: "uppercase", marginTop: 6 }}>Nail Designer Certificada</div>
+                <div className="sans" style={{ color: "rgba(253,240,244,0.85)", fontSize: 10, letterSpacing: 3, textTransform: "uppercase", marginTop: 6 }}>Nail Designer Certificada</div>
               </div>
             </div>
-            <div style={{ position: "absolute", top: -16, right: -16, width: 80, height: 80, border: "1px solid rgba(196,154,108,0.4)" }} />
-            <div style={{ position: "absolute", bottom: -16, left: -16, width: 80, height: 80, border: "1px solid rgba(196,154,108,0.2)" }} />
+            <div style={{ position: "absolute", top: -16, right: -16, width: 80, height: 80, border: "1px solid rgba(253,240,244,0.35)" }} />
+            <div style={{ position: "absolute", bottom: -16, left: -16, width: 80, height: 80, border: "1px solid rgba(253,240,244,0.2)" }} />
           </div>
 
           <div>
-            <div className="section-eyebrow" style={{ color: "rgba(196,154,108,0.8)" }}>Sobre Mim</div>
+            <div className="section-eyebrow" style={{ color: "rgba(253,240,244,0.9)" }}>Sobre Mim</div>
             <h2 style={{ fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 300, color: "#fdfaf8", letterSpacing: -0.5, marginBottom: 28, lineHeight: 1.15 }}>
               Cada unha é<br /><em>uma obra de arte</em>
             </h2>
-            <div style={{ width: 40, height: 1, background: "#c49a6c", marginBottom: 32 }} />
-            <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.65)", fontWeight: 300, lineHeight: 1.9, marginBottom: 24 }}>
+            <div style={{ width: 40, height: 1, background: "rgba(253,250,248,0.6)", marginBottom: 32 }} />
+            <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.8)", fontWeight: 300, lineHeight: 1.9, marginBottom: 24 }}>
               Com mais de 8 anos de experiência, sou especialista em nail art, extensões e técnicas avançadas de esmaltação. Meu trabalho une técnica precisa com sensibilidade artística.
             </p>
-            <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.65)", fontWeight: 300, lineHeight: 1.9, marginBottom: 40 }}>
+            <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.8)", fontWeight: 300, lineHeight: 1.9, marginBottom: 40 }}>
               Cada cliente recebe uma experiência personalizada, num ambiente sofisticado e acolhedor, criado para que você se sinta verdadeiramente especial.
             </p>
             <div style={{ display: "flex", gap: 48, marginBottom: 40 }}>
               {[["8+", "Anos de Experiência"], ["500+", "Clientes Felizes"], ["50+", "Técnicas Dominadas"]].map(([n, l]) => (
                 <div key={l}>
-                  <div style={{ fontSize: 32, fontWeight: 300, color: "#c49a6c" }}>{n}</div>
-                  <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "rgba(253,250,248,0.4)", textTransform: "uppercase", marginTop: 4, lineHeight: 1.4 }}>{l}</div>
+                  <div style={{ fontSize: 32, fontWeight: 300, color: "#fdfaf8" }}>{n}</div>
+                  <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "rgba(253,250,248,0.55)", textTransform: "uppercase", marginTop: 4, lineHeight: 1.4 }}>{l}</div>
                 </div>
               ))}
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               {["Certificada ABNT", "Premium Products", "Nail Art Expert"].map(tag => (
-                <span key={tag} style={{ background: "rgba(196,154,108,0.1)", border: "1px solid rgba(196,154,108,0.3)", color: "#c49a6c", fontFamily: "'Jost', sans-serif", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", padding: "6px 16px" }}>{tag}</span>
+                <span key={tag} style={{ background: "rgba(253,250,248,0.15)", border: "1px solid rgba(253,250,248,0.35)", color: "#fdfaf8", fontFamily: "'Jost', sans-serif", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", padding: "6px 16px" }}>{tag}</span>
               ))}
             </div>
           </div>
@@ -440,15 +441,15 @@ export default function NailStudio() {
               animation: "floatIn 0.5s ease",
             }}>
               <div className="testimonial-card" style={{ textAlign: "center" }}>
-                <div style={{ fontSize: 48, color: "#f4c2cc", fontWeight: 300, lineHeight: 1, marginBottom: 24 }}>"</div>
-                <p style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 300, fontStyle: "italic", color: "#fdfaf8", lineHeight: 1.6, marginBottom: 36 }}>
+                <div style={{ fontSize: 48, color: "#d4a0b8", fontWeight: 300, lineHeight: 1, marginBottom: 24 }}>"</div>
+                <p style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 300, fontStyle: "italic", color: "#2a1a1f", lineHeight: 1.6, marginBottom: 36 }}>
                   {t.text}
                 </p>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
                   <StarRating count={t.stars} />
                 </div>
-                <div style={{ fontSize: 16, fontWeight: 400, color: "#fdfaf8", marginBottom: 4 }}>{t.name}</div>
-                <div className="sans" style={{ fontSize: 11, letterSpacing: 2, color: "#c49a6c", textTransform: "uppercase" }}>{t.role}</div>
+                <div style={{ fontSize: 16, fontWeight: 400, color: "#5a2a3a", marginBottom: 4 }}>{t.name}</div>
+                <div className="sans" style={{ fontSize: 11, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase" }}>{t.role}</div>
               </div>
             </div>
           ))}
@@ -457,7 +458,7 @@ export default function NailStudio() {
             {TESTIMONIALS.map((_, i) => (
               <button key={i} onClick={() => { setActiveTestimonial(i); clearInterval(intervalRef.current); }} style={{
                 width: i === activeTestimonial ? 28 : 8, height: 2,
-                background: i === activeTestimonial ? "#c49a6c" : "#d4c0b0",
+                background: i === activeTestimonial ? "#d4789a" : "#f0c0d0",
                 border: "none", cursor: "pointer", transition: "all 0.4s ease", padding: 0,
               }} />
             ))}
@@ -493,57 +494,57 @@ export default function NailStudio() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg, #f0d2d0 0%, #f0c3be 100%)", padding: "120px 8vw", textAlign: "center", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", width: 500, height: 500, top: "50%", left: "50%", transform: "translate(-50%, -50%)", borderRadius: "50%", background: "radial-gradient(circle, rgba(196,154,108,0.1) 0%, transparent 70%)" }} />
+      <section style={{ background: "linear-gradient(135deg, #c4788e 0%, #e0a0b8 100%)", padding: "120px 8vw", textAlign: "center", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", width: 500, height: 500, top: "50%", left: "50%", transform: "translate(-50%, -50%)", borderRadius: "50%", background: "radial-gradient(circle, rgba(253,250,248,0.12) 0%, transparent 70%)" }} />
         <div style={{ position: "relative", zIndex: 2 }}>
-          <div className="section-eyebrow" style={{ color: "rgba(196,154,108,0.8)" }}>Agende Agora</div>
+          <div className="section-eyebrow" style={{ color: "rgba(253,250,248,0.9)" }}>Agende Agora</div>
           <h2 style={{ fontSize: "clamp(36px, 6vw, 72px)", fontWeight: 300, color: "#fdfaf8", letterSpacing: -0.5, marginBottom: 20, lineHeight: 1.1 }}>
             Você merece o<br /><em>melhor cuidado</em>
           </h2>
-          <div className="divider" />
-          <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.6)", fontWeight: 300, maxWidth: 440, margin: "0 auto 48px", lineHeight: 1.8 }}>
+          <div className="divider" style={{ background: "linear-gradient(90deg, transparent, rgba(253,250,248,0.6), transparent)" }} />
+          <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.8)", fontWeight: 300, maxWidth: 440, margin: "0 auto 48px", lineHeight: 1.8 }}>
             Entre em contato pelo WhatsApp e agende seu horário. Vagas limitadas — garanta a sua.
           </p>
-          <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary" style={{ background: "#c49a6c", fontSize: 13, padding: "20px 52px" }}>
+          <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary" style={{ background: "#fdfaf8", color: "#c4788e", fontSize: 13, padding: "20px 52px" }}>
             Agendar pelo WhatsApp
           </a>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer id="contato" style={{ background: "#1a0f13", padding: "80px 8vw 48px" }}>
+      <footer id="contato" style={{ background: "#5a2a3a", padding: "80px 8vw 48px" }}>
         <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 60 }}>
           <div>
             <div style={{ fontSize: 24, fontWeight: 300, letterSpacing: 6, color: "#fdfaf8", marginBottom: 4 }}>LUNNA</div>
-            <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: "#c49a6c", textTransform: "uppercase", marginBottom: 24 }}>Nail Studio</div>
-            <p className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.4)", fontWeight: 300, lineHeight: 1.8, maxWidth: 260 }}>
+            <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Nail Studio</div>
+            <p className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", fontWeight: 300, lineHeight: 1.8, maxWidth: 260 }}>
               Arte e sofisticação em cada detalhe. Porque você merece o melhor.
             </p>
           </div>
           <div>
-            <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#c49a6c", textTransform: "uppercase", marginBottom: 24 }}>Serviços</div>
+            <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Serviços</div>
             {["Banho em Gel", "Fibra de Vidro", "Nail Art", "Esmaltação", "Manutenção"].map(s => (
-              <div key={s} className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.4)", marginBottom: 12, fontWeight: 300 }}>{s}</div>
+              <div key={s} className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", marginBottom: 12, fontWeight: 300 }}>{s}</div>
             ))}
           </div>
           <div>
-            <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#c49a6c", textTransform: "uppercase", marginBottom: 24 }}>Horários</div>
+            <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Horários</div>
             {[["Seg – Sex", "9h às 19h"], ["Sábado", "9h às 17h"], ["Domingo", "Fechado"]].map(([d, h]) => (
               <div key={d} style={{ marginBottom: 16 }}>
-                <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.6)", marginBottom: 2 }}>{d}</div>
-                <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.35)", fontWeight: 300 }}>{h}</div>
+                <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.7)", marginBottom: 2 }}>{d}</div>
+                <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.4)", fontWeight: 300 }}>{h}</div>
               </div>
             ))}
           </div>
           <div>
-            <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#c49a6c", textTransform: "uppercase", marginBottom: 24 }}>Contato</div>
-            <a href={WA_LINK} target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>WhatsApp</a>
-            <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.4)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
-            <div className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.4)", fontWeight: 300, lineHeight: 1.6 }}>Florianópolis, SC</div>
+            <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Contato</div>
+            <a href={WA_LINK} target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.5)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>WhatsApp</a>
+            <a href="https://www.instagram.com/_bymanunailss/" target="_blank" rel="noopener" style={{ display: "block", fontSize: 13, color: "rgba(253,250,248,0.5)", textDecoration: "none", marginBottom: 12, fontFamily: "'Jost',sans-serif", fontWeight: 300 }}>@lunna.nailstudio</a>
+            <div className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", fontWeight: 300, lineHeight: 1.6 }}>Florianópolis, SC</div>
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid rgba(253,250,248,0.06)", paddingTop: 32, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+        <div style={{ borderTop: "1px solid rgba(253,250,248,0.08)", paddingTop: 32, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <div className="sans" style={{ fontSize: 11, color: "rgba(253,250,248,0.25)", fontWeight: 300 }}>© 2025 Lunna Nail Studio. Todos os direitos reservados.</div>
           <div className="sans" style={{ fontSize: 11, color: "rgba(253,250,248,0.25)", fontWeight: 300 }}>Feito com ✦ para você</div>
         </div>
@@ -563,7 +564,7 @@ export default function NailStudio() {
           <div style={{ position: "relative", width: "min(400px, 85vw)", aspectRatio: "3/4", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }} onClick={e => e.stopPropagation()}>
             <img src={lightbox.img} alt={lightbox.label} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             <div style={{ position: "absolute", bottom: 24, left: 0, right: 0, textAlign: "center" }}>
-              <div style={{ fontFamily: "'Jost',sans-serif", fontSize: 12, letterSpacing: 3, color: "#f0d2d0", textTransform: "uppercase", opacity: 0.7 }}>{lightbox.label}</div>
+              <div style={{ fontFamily: "'Jost',sans-serif", fontSize: 12, letterSpacing: 3, color: "#2a1a1f", textTransform: "uppercase", opacity: 0.7 }}>{lightbox.label}</div>
             </div>
             <button onClick={() => setLightbox(null)} style={{ position: "absolute", top: -40, right: 0, background: "none", border: "none", color: "white", fontSize: 28, cursor: "pointer" }}>×</button>
           </div>
