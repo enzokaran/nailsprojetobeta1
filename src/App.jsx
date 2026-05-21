@@ -12,8 +12,8 @@ const SERVICES = [
 const TESTIMONIALS = [
   { name: "Isabela Martins", text: "Simplesmente perfeita! Cada detalhe foi tratado com tanto cuidado. Minhas unhas nunca ficaram tão lindas. Voltarei sempre.", role: "Cliente há 2 anos" },
   { name: "Gabriela Souza", text: "O nail art ficou exatamente como eu queria. Profissionalismo e delicadeza em cada detalhe. Super recomendo!", role: "Cliente há 1 ano" },
-  { name: "Camila Ferreira", text: "Atendimento acolhedor e resultado incrível. O ambiente é lindo e relaxante. Me sinto especial a cada visita.",  role: "Cliente há 3 anos" },
-  { name: "Larissa Costa", text: "Gel que durou mais de 3 semanas sem lascar! Técnica impecável, ambiente elegante. Recomendo de olhos fechados.",  role: "Cliente há 6 meses" },
+  { name: "Camila Ferreira", text: "Atendimento acolhedor e resultado incrível. O ambiente é lindo e relaxante. Me sinto especial a cada visita.", role: "Cliente há 3 anos" },
+  { name: "Larissa Costa", text: "Gel que durou mais de 3 semanas sem lascar! Técnica impecável, ambiente elegante. Recomendo de olhos fechados.", role: "Cliente há 6 meses" },
 ];
 
 const GALLERY_ITEMS = [
