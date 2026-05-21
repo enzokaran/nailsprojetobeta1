@@ -490,7 +490,7 @@ export default function NailStudio() {
           </div>
           <div>
             <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Horários</div>
-            {[["Seg – Sex", "8:30-11:30 13:30-16:30"], ["Sábado - Domingo", "Fechado"]].map(([d, h]) => (
+            {[["Seg – Sexta", "8:30-11:30 13:30-16:30"], ["Sábado - Domingo", "Fechado"]].map(([d, h]) => (
               <div key={d} style={{ marginBottom: 16 }}>
                 <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.7)", marginBottom: 2 }}>{d}</div>
                 <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.4)", fontWeight: 300 }}>{h}</div>
