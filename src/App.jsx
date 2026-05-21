@@ -24,13 +24,11 @@ const GALLERY_ITEMS = [
 ];
 
 const INSTAGRAM_ITEMS = [
-  { id: 1, color: "#f4c2cc", likes: "2.3k" },
-  { id: 2, color: "#e8d5c4", likes: "1.8k" },
-  { id: 3, color: "#c9a9b4", likes: "3.1k" },
-  { id: 4, color: "#f7e8e8", likes: "2.7k" },
-  { id: 5, color: "#d4b8c7", likes: "1.5k" },
-  { id: 6, color: "#e6cec8", likes: "2.9k" },
-];
+  { id: 1, img: "/imagens/unha.png", postUrl: "https://www.instagram.com/p/DYiJnzbxDU2/" },
+  { id: 2, img: "/imagens/unha1.png", postUrl: "https://www.instagram.com/p/DYOFneSRXye/" },
+  { id: 3, img: "/imagens/unha2.png", postUrl: "https://www.instagram.com/p/DYYYEwfxZkK/" },
+  { id: 4, img: "/imagens/unha3.png", postUrl: "https://www.instagram.com/p/DYNftZfRVob/" },
+]
 
 function NailIllustration({ color = "#f4c2cc", style = {} }) {
   return (
@@ -112,25 +110,16 @@ function StarRating({ count = 5 }) {
 
 export default function NailStudio() {
   const [scrolled, setScrolled] = useState(false);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
   const [lightbox, setLightbox] = useState(null);
   const heroRef = useRef(null);
-  const intervalRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => setHeroVisible(true), 100);
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setActiveTestimonial(p => (p + 1) % TESTIMONIALS.length);
-    }, 4500);
-    return () => clearInterval(intervalRef.current);
   }, []);
 
   const scrollTo = (id) => {
@@ -382,47 +371,6 @@ export default function NailStudio() {
         </div>
       </section>
 
-
-
-      {/* TESTIMONIALS */}
-      <section style={{ padding: "120px 8vw", background: "#fdfaf8" }}>
-        <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <div className="section-eyebrow">Depoimentos</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
-            O que nossas<br /><em>clientes dizem</em>
-          </h2>
-          <div className="divider" />
-        </div>
-
-        <div style={{ maxWidth: 680, margin: "0 auto", position: "relative" }}>
-          {TESTIMONIALS.map((t, i) => (
-            <div key={i} style={{
-              display: i === activeTestimonial ? "block" : "none",
-              animation: "floatIn 0.5s ease",
-            }}>
-              <div className="testimonial-card" style={{ textAlign: "center" }}>
-                <div style={{ fontSize: 48, color: "#d4a0b8", fontWeight: 300, lineHeight: 1, marginBottom: 24 }}>"</div>
-                <p style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 300, fontStyle: "italic", color: "#2a1a1f", lineHeight: 1.6, marginBottom: 36 }}>
-                  {t.text}
-                </p>
-                <div style={{ fontSize: 16, fontWeight: 400, color: "#5a2a3a", marginBottom: 4 }}>{t.name}</div>
-                <div className="sans" style={{ fontSize: 11, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase" }}>{t.role}</div>
-              </div>
-            </div>
-          ))}
-
-          <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 32 }}>
-            {TESTIMONIALS.map((_, i) => (
-              <button key={i} onClick={() => { setActiveTestimonial(i); clearInterval(intervalRef.current); }} style={{
-                width: i === activeTestimonial ? 28 : 8, height: 2,
-                background: i === activeTestimonial ? "#d4789a" : "#f0c0d0",
-                border: "none", cursor: "pointer", transition: "all 0.4s ease", padding: 0,
-              }} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* INSTAGRAM */}
       <section style={{ padding: "0 0 120px", background: "#fdfaf8" }}>
         <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -432,16 +380,12 @@ export default function NailStudio() {
 
         <div className="insta-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 3 }}>
           {INSTAGRAM_ITEMS.map((item) => (
-            <div key={item.id} className="insta-item">
-              <div style={{ width: "100%", height: "100%", background: `linear-gradient(135deg, ${item.color}, ${item.color}bb)`, minHeight: 220, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ width: 80, height: 100, opacity: 0.7 }}>
-                  <NailIllustration color={item.color} />
-                </div>
-              </div>
+            <a key={item.id} className="insta-item" href={item.postUrl} target="_blank" rel="noopener" style={{ textDecoration: "none", display: "block" }}>
+              <img src={item.img} alt="Post do Instagram" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 220 }} />
               <div className="insta-overlay">
                 <span className="insta-likes">♡ {item.likes}</span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
