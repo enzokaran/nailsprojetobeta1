@@ -3,17 +3,17 @@ import { useState, useEffect, useRef } from "react";
 const NAV_LINKS = ["Início", "Serviços", "Galeria", "Sobre", "Contato"];
 
 const SERVICES = [
-  { name: "Molde f1", desc: "Acabamento impecável com durabilidade ate 15 dias,manutenção 50$.", price: "R$ 70", icon: "✦", duration: "60 min", wa: "Olá! Vi o site e gostaria de agendar um Molde F1. Poderia me informar os horários disponíveis?" },
-  { name: "Esmaltação em gel", desc: "manutenção 45$.", price: "R$ 50", icon: "◇", duration: "90 min", wa: "Olá! Gostaria de agendar uma Esmaltação em Gel. Poderia me informar os horários disponíveis?" },
-  { name: "Pedicure", desc: "inventar algo praca", price: "R$25", icon: "◈", duration: "120 min", wa: "Olá! Gostaria de agendar uma Pedicure. Poderia me informar os horários disponíveis?" },
-  { name: "Esmaltação tradicional", desc: "Cores vibrantes e acabamento preciso que dura dias.", price: "R$ 30", icon: "○", duration: "45 min", wa: "Olá! Gostaria de agendar uma Esmaltação Tradicional. Poderia me informar os horários disponíveis?" },
+  { name: "Molde f1", desc: "Acabamento impecável com durabilidade ate 15 dias,manutenção 50$.", price: "R$ 70", icon: "✦", duration: "De 60 min a 1:20", wa: "Olá! Vi o site e gostaria de agendar um Molde F1. Poderia me informar os horários disponíveis?" },
+  { name: "Esmaltação em gel", desc: "manutenção 45$.", price: "R$ 50", icon: "◇", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação em Gel. Poderia me informar os horários disponíveis?" },
+  { name: "Pedicure", desc: "inventar algo praca", price: "R$25", icon: "◈", duration: "40 min", wa: "Olá! Gostaria de agendar uma Pedicure. Poderia me informar os horários disponíveis?" },
+  { name: "Esmaltação tradicional", desc: "Cores vibrantes e acabamento preciso que dura dias.", price: "R$ 30", icon: "○", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação Tradicional. Poderia me informar os horários disponíveis?" },
 ];
 
 const TESTIMONIALS = [
-  { name: "Isabela Martins", text: "Simplesmente perfeita! Cada detalhe foi tratado com tanto cuidado. Minhas unhas nunca ficaram tão lindas. Voltarei sempre.", stars: 5, role: "Cliente há 2 anos" },
-  { name: "Gabriela Souza", text: "O nail art ficou exatamente como eu queria. Profissionalismo e delicadeza em cada detalhe. Super recomendo!", stars: 5, role: "Cliente há 1 ano" },
-  { name: "Camila Ferreira", text: "Atendimento acolhedor e resultado incrível. O ambiente é lindo e relaxante. Me sinto especial a cada visita.", stars: 5, role: "Cliente há 3 anos" },
-  { name: "Larissa Costa", text: "Gel que durou mais de 3 semanas sem lascar! Técnica impecável, ambiente elegante. Recomendo de olhos fechados.", stars: 5, role: "Cliente há 6 meses" },
+  { name: "Isabela Martins", text: "Simplesmente perfeita! Cada detalhe foi tratado com tanto cuidado. Minhas unhas nunca ficaram tão lindas. Voltarei sempre.", role: "Cliente há 2 anos" },
+  { name: "Gabriela Souza", text: "O nail art ficou exatamente como eu queria. Profissionalismo e delicadeza em cada detalhe. Super recomendo!", role: "Cliente há 1 ano" },
+  { name: "Camila Ferreira", text: "Atendimento acolhedor e resultado incrível. O ambiente é lindo e relaxante. Me sinto especial a cada visita.",  role: "Cliente há 3 anos" },
+  { name: "Larissa Costa", text: "Gel que durou mais de 3 semanas sem lascar! Técnica impecável, ambiente elegante. Recomendo de olhos fechados.",  role: "Cliente há 6 meses" },
 ];
 
 const GALLERY_ITEMS = [
@@ -25,7 +25,6 @@ const GALLERY_ITEMS = [
   { id: 6, color: "#e6cec8", label: "Terracotta Soft", size: "normal", img: "/imagens/unha1.png" },
   { id: 7, color: "#f0dbd8", label: "Petal Pink", size: "normal", img: "/imagens/unha2.png" },
   { id: 8, color: "#c8b4bc", label: "Dusty Lilac", size: "normal", img: "/imagens/unha3.png" },
-  { id: 9, color: "#edddd4", label: "Warm Nude", size: "normal", img: "/imagens/unha.png" },
 ];
 
 const INSTAGRAM_ITEMS = [
