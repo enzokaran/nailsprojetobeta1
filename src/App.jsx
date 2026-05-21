@@ -162,7 +162,7 @@ export default function NailStudio() {
         .btn-outline { background: transparent; color: #5a2a3a; border: 1px solid rgba(90,42,58,0.25); padding: 14px 32px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
         .btn-outline:hover { border-color: #c4788e; background: #c4788e; color: #fdfaf8; }
         .service-card { background: #fff; padding: 40px 32px; border: 1px solid rgba(196,120,142,0.12); transition: all 0.4s ease; cursor: default; position: relative; overflow: hidden; }
-        .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(244,194,204,0.07) 0%, rgba(253,240,244,0.07) 100%); opacity: 0; transition: opacity 0.4s; }
+        .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(244,194,204,0.07) 0%, rgba(253,240,244,0.07) 100%); opacity: 0; transition: opacity 0.4s; pointer-events: none; }
         .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(196,120,142,0.13); border-color: rgba(196,120,142,0.3); }
         .service-card:hover::before { opacity: 1; }
         .gallery-item { overflow: hidden; cursor: pointer; position: relative; }
@@ -376,7 +376,7 @@ export default function NailStudio() {
       <section id="galeria" style={{ padding: "0 0 120px" }}>
         <div style={{ padding: "0 8vw 56px", textAlign: "center" }}>
           <div className="section-eyebrow">Galeria</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 }}>
             <em>Inspiração</em> para<br />cada ocasião
           </h2>
           <div className="divider" />
@@ -451,7 +451,7 @@ export default function NailStudio() {
       <section style={{ padding: "120px 8vw", background: "#fdfaf8" }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <div className="section-eyebrow">Depoimentos</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 }}>
             O que nossas<br /><em>clientes dizem</em>
           </h2>
           <div className="divider" />
