@@ -17,7 +17,7 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_ITEMS = [
-  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "normal", img: "/imagens/unha.png" },
+  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "tall", img: "/imagens/unha.png" },
   { id: 2, color: "#e8d5c4", label: "Champagne", size: "normal", img: "/imagens/unha1.png" },
   { id: 3, color: "#c9a9b4", label: "Mauve Dreams", size: "normal", img: "/imagens/unha2.png" },
   { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "tall", img: "/imagens/unha3.png" },
@@ -322,7 +322,7 @@ export default function NailStudio() {
       <section id="serviços" style={{ padding: "120px 8vw" }}>
         <div style={{ textAlign: "center", marginBottom: 72 }}>
           <div className="section-eyebrow">Nossos Serviços</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5, marginBottom: 20 }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5, marginBottom: 20, color: "#5a2a3a" }}>
             Experiência<br /><em>Completa em Beleza</em>
           </h2>
           <div className="divider" />
@@ -342,7 +342,7 @@ export default function NailStudio() {
                   <div style={{ fontSize: 24, fontWeight: 300, color: "#5a2a3a" }}>{s.price}</div>
                   <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase", marginTop: 2 }}>{s.duration}</div>
                 </div>
-                <a href={waService(s.name)} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#d4789a", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #d4789a", paddingBottom: 2 }}>Agendar →</a>
+                <a href={`https://wa.me/554896344186?text=${encodeURIComponent(s.wa)}`} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#d4789a", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #d4789a", paddingBottom: 2 }}>Agendar →</a>
               </div>
             </div>
           ))}
