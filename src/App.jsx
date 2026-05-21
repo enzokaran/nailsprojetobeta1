@@ -219,8 +219,8 @@ export default function NailStudio() {
         display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
         <div onClick={() => scrollTo("hero")} style={{ cursor: "pointer" }}>
-          <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 6, color: scrolled ? "#5a2a3a" : "#fdfaf8", lineHeight: 1 }}>LUNNA</div>
-          <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: scrolled ? "#d4789a" : "rgba(253,250,248,0.8)", textTransform: "uppercase", marginTop: 2 }}>Nail Studio</div>
+          <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 6, color: scrolled ? "#5a2a3a" : "#fdfaf8", lineHeight: 1 }}>By Manu Nails</div>
+          <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: scrolled ? "#d4789a" : "rgba(253,250,248,0.8)", textTransform: "uppercase", marginTop: 2 }}>By Manu Nails</div>
         </div>
 
         <div style={{ display: "flex", gap: 36, alignItems: "center" }} className="desktop-nav">
@@ -253,11 +253,6 @@ export default function NailStudio() {
           <div style={{ position: "absolute", width: 600, height: 600, right: -100, top: -100, borderRadius: "50%", background: "radial-gradient(circle, rgba(253,240,244,0.18) 0%, transparent 70%)" }} />
           <div style={{ position: "absolute", width: 400, height: 400, left: -50, bottom: -50, borderRadius: "50%", background: "radial-gradient(circle, rgba(253,250,248,0.12) 0%, transparent 70%)" }} />
           <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)" }} />
-        </div>
-
-        {/* Hand illustration right side */}
-        <div style={{ position: "absolute", right: "5%", bottom: 0, width: "min(420px, 45vw)", opacity: heroVisible ? 1 : 0, transform: heroVisible ? "translateY(0)" : "translateY(40px)", transition: "all 1.2s cubic-bezier(0.22,1,0.36,1) 0.4s" }}>
-          <HandIllustration />
         </div>
 
         {/* Content */}
@@ -293,14 +288,6 @@ export default function NailStudio() {
             <button onClick={() => scrollTo("galeria")} className="btn-outline" style={{ color: "#fdfaf8", borderColor: "rgba(253,250,248,0.3)" }}>Ver Galeria</button>
           </div>
 
-          <div style={{ display: "flex", gap: 48, marginTop: 72, opacity: heroVisible ? 1 : 0, transition: "opacity 1s ease 1.2s" }}>
-            {[["500+", "Clientes"], ["5★", "Avaliação"], ["8+", "Anos"]].map(([n, l]) => (
-              <div key={l}>
-                <div style={{ fontSize: 28, fontWeight: 300, color: "#fdfaf8", letterSpacing: -0.5 }}>{n}</div>
-                <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "rgba(253,250,248,0.5)", textTransform: "uppercase", marginTop: 4 }}>{l}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -399,52 +386,7 @@ export default function NailStudio() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="sobre" style={{ background: "linear-gradient(135deg, #c4788e 0%, #d4899a 100%)", padding: "120px 8vw" }}>
-        <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
-          {/* Portrait placeholder */}
-          <div style={{ position: "relative" }}>
-            <div style={{ aspectRatio: "4/5", background: "linear-gradient(145deg, #b06080 0%, #c4788e 100%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-              <div style={{ width: "65%", opacity: 0.85 }}>
-                <HandIllustration />
-              </div>
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(90,42,58,0.85) 0%, transparent 60%)", padding: "40px 36px 36px" }}>
-                <div style={{ color: "#fdfaf8", fontSize: 26, fontWeight: 300, fontStyle: "italic" }}>Lunna Oliveira</div>
-                <div className="sans" style={{ color: "rgba(253,240,244,0.85)", fontSize: 10, letterSpacing: 3, textTransform: "uppercase", marginTop: 6 }}>Nail Designer Certificada</div>
-              </div>
-            </div>
-            <div style={{ position: "absolute", top: -16, right: -16, width: 80, height: 80, border: "1px solid rgba(253,240,244,0.35)" }} />
-            <div style={{ position: "absolute", bottom: -16, left: -16, width: 80, height: 80, border: "1px solid rgba(253,240,244,0.2)" }} />
-          </div>
 
-          <div>
-            <div className="section-eyebrow" style={{ color: "rgba(253,240,244,0.9)" }}>Sobre Mim</div>
-            <h2 style={{ fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 300, color: "#fdfaf8", letterSpacing: -0.5, marginBottom: 28, lineHeight: 1.15 }}>
-              Cada unha é<br /><em>uma obra de arte</em>
-            </h2>
-            <div style={{ width: 40, height: 1, background: "rgba(253,250,248,0.6)", marginBottom: 32 }} />
-            <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.8)", fontWeight: 300, lineHeight: 1.9, marginBottom: 24 }}>
-              Com mais de 8 anos de experiência, sou especialista em nail art, extensões e técnicas avançadas de esmaltação. Meu trabalho une técnica precisa com sensibilidade artística.
-            </p>
-            <p className="sans" style={{ fontSize: 15, color: "rgba(253,250,248,0.8)", fontWeight: 300, lineHeight: 1.9, marginBottom: 40 }}>
-              Cada cliente recebe uma experiência personalizada, num ambiente sofisticado e acolhedor, criado para que você se sinta verdadeiramente especial.
-            </p>
-            <div style={{ display: "flex", gap: 48, marginBottom: 40 }}>
-              {[["8+", "Anos de Experiência"], ["500+", "Clientes Felizes"], ["50+", "Técnicas Dominadas"]].map(([n, l]) => (
-                <div key={l}>
-                  <div style={{ fontSize: 32, fontWeight: 300, color: "#fdfaf8" }}>{n}</div>
-                  <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "rgba(253,250,248,0.55)", textTransform: "uppercase", marginTop: 4, lineHeight: 1.4 }}>{l}</div>
-                </div>
-              ))}
-            </div>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              {["Certificada ABNT", "Premium Products", "Nail Art Expert"].map(tag => (
-                <span key={tag} style={{ background: "rgba(253,250,248,0.15)", border: "1px solid rgba(253,250,248,0.35)", color: "#fdfaf8", fontFamily: "'Jost', sans-serif", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", padding: "6px 16px" }}>{tag}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* TESTIMONIALS */}
       <section style={{ padding: "120px 8vw", background: "#fdfaf8" }}>
@@ -467,9 +409,6 @@ export default function NailStudio() {
                 <p style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 300, fontStyle: "italic", color: "#2a1a1f", lineHeight: 1.6, marginBottom: 36 }}>
                   {t.text}
                 </p>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
-                  <StarRating count={t.stars} />
-                </div>
                 <div style={{ fontSize: 16, fontWeight: 400, color: "#5a2a3a", marginBottom: 4 }}>{t.name}</div>
                 <div className="sans" style={{ fontSize: 11, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase" }}>{t.role}</div>
               </div>
@@ -537,7 +476,7 @@ export default function NailStudio() {
       <footer id="contato" style={{ background: "#5a2a3a", padding: "80px 8vw 48px" }}>
         <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 60 }}>
           <div>
-            <div style={{ fontSize: 24, fontWeight: 300, letterSpacing: 6, color: "#fdfaf8", marginBottom: 4 }}>LUNNA</div>
+            <div style={{ fontSize: 24, fontWeight: 300, letterSpacing: 6, color: "#fdfaf8", marginBottom: 4 }}>By Manu Nails</div>
             <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Nail Studio</div>
             <p className="sans" style={{ fontSize: 13, color: "rgba(253,250,248,0.5)", fontWeight: 300, lineHeight: 1.8, maxWidth: 260 }}>
               Arte e sofisticação em cada detalhe. Porque você merece o melhor.
@@ -551,7 +490,7 @@ export default function NailStudio() {
           </div>
           <div>
             <div className="sans" style={{ fontSize: 10, letterSpacing: 3, color: "#f4c2cc", textTransform: "uppercase", marginBottom: 24 }}>Horários</div>
-            {[["Seg – Sex", "9h às 19h"], ["Sábado", "9h às 17h"], ["Domingo", "Fechado"]].map(([d, h]) => (
+            {[["Seg – Sex", "8:30-11:30 13:30-16:30"], ["Sábado - Domingo", "Fechado"]].map(([d, h]) => (
               <div key={d} style={{ marginBottom: 16 }}>
                 <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.7)", marginBottom: 2 }}>{d}</div>
                 <div className="sans" style={{ fontSize: 12, color: "rgba(253,250,248,0.4)", fontWeight: 300 }}>{h}</div>
@@ -567,8 +506,7 @@ export default function NailStudio() {
         </div>
 
         <div style={{ borderTop: "1px solid rgba(253,250,248,0.08)", paddingTop: 32, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <div className="sans" style={{ fontSize: 11, color: "rgba(253,250,248,0.25)", fontWeight: 300 }}>© 2025 Lunna Nail Studio. Todos os direitos reservados.</div>
-          <div className="sans" style={{ fontSize: 11, color: "rgba(253,250,248,0.25)", fontWeight: 300 }}>Feito com ✦ para você</div>
+          <div className="sans" style={{ fontSize: 11, color: "rgba(253,250,248,0.25)", fontWeight: 300 }}>© 2026 By Manu Nails. Todos os direitos reservados.</div>
         </div>
       </footer>
 
