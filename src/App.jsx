@@ -146,7 +146,7 @@ export default function NailStudio() {
   const WA_LINK = "https://wa.me/554896344186?text=Olá! Gostaria de agendar um horário.";
 
   return (
-    <div style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", background: "#fdfaf8", color: "#2a1a1f", overflowX: "hidden" }}>
+    <div style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", background: "#fdfaf8", color: "#fdfaf8", overflowX: "hidden" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -219,7 +219,7 @@ export default function NailStudio() {
         display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
         <div onClick={() => scrollTo("hero")} style={{ cursor: "pointer" }}>
-          <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 6, color: scrolled ? "#2a1a1f" : "#fdfaf8", lineHeight: 1 }}>LUNNA</div>
+          <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 6, color: scrolled ? "#fdfaf8" : "#fdfaf8", lineHeight: 1 }}>LUNNA</div>
           <div className="sans" style={{ fontSize: 8, letterSpacing: 5, color: scrolled ? "#c49a6c" : "rgba(253,250,248,0.8)", textTransform: "uppercase", marginTop: 2 }}>Nail Studio</div>
         </div>
 
@@ -231,7 +231,7 @@ export default function NailStudio() {
         </div>
 
         <button onClick={() => setMenuOpen(v => !v)} style={{ display: "none", background: "none", border: "none", cursor: "pointer", flexDirection: "column", gap: 5 }} className="menu-btn" aria-label="Menu">
-          {[0,1,2].map(i => <span key={i} style={{ display: "block", width: 24, height: 1, background: scrolled ? "#2a1a1f" : "#fdfaf8", transition: "all 0.3s" }} />)}
+          {[0,1,2].map(i => <span key={i} style={{ display: "block", width: 24, height: 1, background: scrolled ? "#fdfaf8" : "#fdfaf8", transition: "all 0.3s" }} />)}
         </button>
 
         <style>{`.desktop-nav { display: flex !important; } .menu-btn { display: none !important; } @media(max-width: 900px){ .desktop-nav { display: none !important; } .menu-btn { display: flex !important; } }`}</style>
@@ -239,15 +239,15 @@ export default function NailStudio() {
 
       {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <button onClick={() => setMenuOpen(false)} style={{ position: "absolute", top: 24, right: 24, background: "none", border: "none", fontSize: 28, cursor: "pointer", color: "#2a1a1f" }}>×</button>
+        <button onClick={() => setMenuOpen(false)} style={{ position: "absolute", top: 24, right: 24, background: "none", border: "none", fontSize: 28, cursor: "pointer", color: "#fdfaf8" }}>×</button>
         {NAV_LINKS.map(l => (
-          <button key={l} onClick={() => scrollTo(l.toLowerCase())} style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 32, fontWeight: 300, letterSpacing: 4, background: "none", border: "none", cursor: "pointer", color: "#2a1a1f" }}>{l}</button>
+          <button key={l} onClick={() => scrollTo(l.toLowerCase())} style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 32, fontWeight: 300, letterSpacing: 4, background: "none", border: "none", cursor: "pointer", color: "#fdfaf8" }}>{l}</button>
         ))}
         <a href={WA_LINK} target="_blank" rel="noopener" className="btn-primary">WhatsApp</a>
       </div>
 
       {/* HERO */}
-      <section id="início" ref={heroRef} style={{ minHeight: "100vh", position: "relative", display: "flex", alignItems: "center", overflow: "hidden", background: "linear-gradient(135deg, #2a1a1f 0%, #4a2a35 40%, #3a2030 100%)" }}>
+      <section id="início" ref={heroRef} style={{ minHeight: "100vh", position: "relative", display: "flex", alignItems: "center", overflow: "hidden", background: "linear-gradient(135deg, #f0c3be 0%, #fdfaf8 40%, #f0c3be 100%)" }}>
         {/* Decorative background */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <div style={{ position: "absolute", width: 600, height: 600, right: -100, top: -100, borderRadius: "50%", background: "radial-gradient(circle, rgba(196,154,108,0.12) 0%, transparent 70%)" }} />
@@ -311,7 +311,7 @@ export default function NailStudio() {
       </section>
 
       {/* BRAND BAR */}
-      <div style={{ background: "#2a1a1f", padding: "20px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 64, overflowX: "auto" }}>
+      <div style={{ background: "#fdfaf8", padding: "20px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 64, overflowX: "auto" }}>
         {["Técnicas Exclusivas", "✦", "Produtos Premium", "✦", "Atendimento Personalizado", "✦", "Ambiente Refinado"].map((t, i) => (
           <span key={i} className="sans" style={{ fontSize: 10, letterSpacing: 3, color: i % 2 === 1 ? "#c49a6c" : "rgba(253,250,248,0.5)", textTransform: "uppercase", whiteSpace: "nowrap" }}>{t}</span>
         ))}
@@ -381,7 +381,7 @@ export default function NailStudio() {
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           {/* Portrait placeholder */}
           <div style={{ position: "relative" }}>
-            <div style={{ aspectRatio: "4/5", background: "linear-gradient(145deg, #4a2a35 0%, #3a2030 100%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+            <div style={{ aspectRatio: "4/5", background: "linear-gradient(145deg, #fdfaf8 0%, #7e235b 100%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
               <div style={{ width: "65%", opacity: 0.85 }}>
                 <HandIllustration />
               </div>
@@ -441,13 +441,13 @@ export default function NailStudio() {
             }}>
               <div className="testimonial-card" style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 48, color: "#f4c2cc", fontWeight: 300, lineHeight: 1, marginBottom: 24 }}>"</div>
-                <p style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 300, fontStyle: "italic", color: "#2a1a1f", lineHeight: 1.6, marginBottom: 36 }}>
+                <p style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 300, fontStyle: "italic", color: "#fdfaf8", lineHeight: 1.6, marginBottom: 36 }}>
                   {t.text}
                 </p>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
                   <StarRating count={t.stars} />
                 </div>
-                <div style={{ fontSize: 16, fontWeight: 400, color: "#2a1a1f", marginBottom: 4 }}>{t.name}</div>
+                <div style={{ fontSize: 16, fontWeight: 400, color: "#fdfaf8", marginBottom: 4 }}>{t.name}</div>
                 <div className="sans" style={{ fontSize: 11, letterSpacing: 2, color: "#c49a6c", textTransform: "uppercase" }}>{t.role}</div>
               </div>
             </div>
