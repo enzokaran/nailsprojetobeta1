@@ -342,7 +342,7 @@ export default function NailStudio() {
                   <div style={{ fontSize: 24, fontWeight: 300, color: "#5a2a3a" }}>{s.price}</div>
                   <div className="sans" style={{ fontSize: 10, letterSpacing: 2, color: "#d4789a", textTransform: "uppercase", marginTop: 2 }}>{s.duration}</div>
                 </div>
-                <a href={`https://wa.me/554896344186?text=${encodeURIComponent(s.wa)}`} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#d4789a", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #d4789a", paddingBottom: 2 }}>Agendar →</a>
+                <a href={`https://wa.me/554898008162?text=${encodeURIComponent(s.wa)}`} target="_blank" rel="noopener" style={{ fontSize: 10, color: "#d4789a", textDecoration: "none", fontFamily: "'Jost', sans-serif", letterSpacing: 2, textTransform: "uppercase", borderBottom: "1px solid #d4789a", paddingBottom: 2 }}>Agendar →</a>
               </div>
             </div>
           ))}
@@ -353,7 +353,7 @@ export default function NailStudio() {
       <section id="galeria" style={{ padding: "0 0 120px" }}>
         <div style={{ padding: "0 8vw 56px", textAlign: "center" }}>
           <div className="section-eyebrow">Galeria</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
             <em>Inspiração</em> para<br />cada ocasião
           </h2>
           <div className="divider" />
@@ -428,7 +428,7 @@ export default function NailStudio() {
       <section style={{ padding: "120px 8vw", background: "#fdfaf8" }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <div className="section-eyebrow">Depoimentos</div>
-          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 }}>
+          <h2 style={{ fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 300, letterSpacing: -0.5 , color: "#5a2a3a" }}>
             O que nossas<br /><em>clientes dizem</em>
           </h2>
           <div className="divider" />
