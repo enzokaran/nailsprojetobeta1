@@ -493,7 +493,7 @@ export default function NailStudio() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg, #2a1a1f 0%, #4a2a35 100%)", padding: "120px 8vw", textAlign: "center", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "linear-gradient(135deg, #f0d2d0 0%, #f0c3be 100%)", padding: "120px 8vw", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", width: 500, height: 500, top: "50%", left: "50%", transform: "translate(-50%, -50%)", borderRadius: "50%", background: "radial-gradient(circle, rgba(196,154,108,0.1) 0%, transparent 70%)" }} />
         <div style={{ position: "relative", zIndex: 2 }}>
           <div className="section-eyebrow" style={{ color: "rgba(196,154,108,0.8)" }}>Agende Agora</div>
@@ -563,7 +563,7 @@ export default function NailStudio() {
           <div style={{ position: "relative", width: "min(400px, 85vw)", aspectRatio: "3/4", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }} onClick={e => e.stopPropagation()}>
             <img src={lightbox.img} alt={lightbox.label} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             <div style={{ position: "absolute", bottom: 24, left: 0, right: 0, textAlign: "center" }}>
-              <div style={{ fontFamily: "'Jost',sans-serif", fontSize: 12, letterSpacing: 3, color: "#2a1a1f", textTransform: "uppercase", opacity: 0.7 }}>{lightbox.label}</div>
+              <div style={{ fontFamily: "'Jost',sans-serif", fontSize: 12, letterSpacing: 3, color: "#f0d2d0", textTransform: "uppercase", opacity: 0.7 }}>{lightbox.label}</div>
             </div>
             <button onClick={() => setLightbox(null)} style={{ position: "absolute", top: -40, right: 0, background: "none", border: "none", color: "white", fontSize: 28, cursor: "pointer" }}>×</button>
           </div>
