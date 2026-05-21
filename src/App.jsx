@@ -3,12 +3,10 @@ import { useState, useEffect, useRef } from "react";
 const NAV_LINKS = ["Início", "Serviços", "Galeria", "Sobre", "Contato"];
 
 const SERVICES = [
-  { name: "Banho em Gel", desc: "Acabamento impecável com durabilidade superior de até 3 semanas.", price: "R$ 120", icon: "✦", duration: "60 min" },
-  { name: "Fibra de Vidro", desc: "Resistência e naturalidade combinadas em unhas perfeitas.", price: "R$ 150", icon: "◇", duration: "90 min" },
-  { name: "Alongamento", desc: "Extensões elegantes que realçam a beleza natural das suas mãos.", price: "R$ 180", icon: "◈", duration: "120 min" },
-  { name: "Esmaltação", desc: "Cores vibrantes e acabamento preciso que dura dias.", price: "R$ 60", icon: "○", duration: "45 min" },
-  { name: "Manutenção", desc: "Cuidado e renovação das suas unhas com atenção especializada.", price: "R$ 90", icon: "◎", duration: "60 min" },
-  { name: "Nail Art", desc: "Arte exclusiva e personalizada criada especialmente para você.", price: "R$ 200", icon: "◐", duration: "90 min" },
+  { name: "Molde f1", desc: "Acabamento impecável com durabilidade ate 15 dias,manutenção 50$.", price: "R$ 70", icon: "✦", duration: "60 min" },
+  { name: "Esmaltação em gel", desc: "manutenção 45$.", price: "R$ 50", icon: "◇", duration: "90 min" },
+  { name: "Pedicure", desc: "inventar algo praca", price: "R$25", icon: "◈", duration: "120 min" },
+  { name: "Esmaltação tradicional", desc: "Cores vibrantes e acabamento preciso que dura dias.", price: "R$ 30", icon: "○", duration: "45 min" },
 ];
 
 const TESTIMONIALS = [
@@ -145,7 +143,7 @@ export default function NailStudio() {
     setMenuOpen(false);
   };
 
-  const WA_LINK = "https://wa.me/554898008162?text=Olá! Gostaria de agendar um horário.";
+  const WA_LINK = "https://wa.me/554896344186?text=Olá! Gostaria de agendar um horário.";
 
   return (
     <div style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", background: "#fdfaf8", color: "#2a1a1f", overflowX: "hidden" }}>
@@ -154,14 +152,14 @@ export default function NailStudio() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
-        ::selection { background: #f4c2cc; color: #2a1a1f; }
+        ::selection { background: #f4c2cc; color: #f0d2d0; }
         .sans { font-family: 'Jost', system-ui, sans-serif; }
         .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
         .fade-up.visible { opacity: 1; transform: none; }
-        .btn-primary { background: #2a1a1f; color: #fdfaf8; border: none; padding: 16px 36px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
+        .btn-primary { background: #f0d2d0; color: #fdfaf8; border: none; padding: 16px 36px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
         .btn-primary:hover { background: #c49a6c; transform: translateY(-2px); }
-        .btn-outline { background: transparent; color: #2a1a1f; border: 1px solid rgba(42,26,31,0.3); padding: 14px 32px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
-        .btn-outline:hover { border-color: #2a1a1f; background: #2a1a1f; color: #fdfaf8; }
+        .btn-outline { background: transparent; color: #f0d2d0; border: 1px solid rgba(42,26,31,0.3); padding: 14px 32px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; display: inline-block; text-decoration: none; }
+        .btn-outline:hover { border-color: #f0d2d0; background: #f0d2d0; color: #fdfaf8; }
         .service-card { background: #fff; padding: 40px 32px; border: 1px solid rgba(42,26,31,0.08); transition: all 0.4s ease; cursor: default; position: relative; overflow: hidden; }
         .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(196,154,108,0.04) 0%, rgba(244,194,204,0.04) 100%); opacity: 0; transition: opacity 0.4s; }
         .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(42,26,31,0.1); border-color: rgba(196,154,108,0.3); }
@@ -379,7 +377,7 @@ export default function NailStudio() {
       </section>
 
       {/* ABOUT */}
-      <section id="sobre" style={{ background: "#2a1a1f", padding: "120px 8vw" }}>
+      <section id="sobre" style={{ background: "#f0d2d0", padding: "120px 8vw" }}>
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           {/* Portrait placeholder */}
           <div style={{ position: "relative" }}>
