@@ -5,8 +5,8 @@ const NAV_LINKS = ["Início", "Serviços", "Galeria", "Sobre", "Contato"];
 const SERVICES = [
   { name: "Molde f1", desc: "Acabamento impecável com durabilidade ate 15 dias,manutenção 50$.", price: "R$ 70", icon: "✦", duration: "De 60 min a 1:20", wa: "Olá! Vi o site e gostaria de agendar um Molde F1. Poderia me informar os horários disponíveis?" },
   { name: "Esmaltação em gel", desc: "manutenção 45$.", price: "R$ 50", icon: "◇", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação em Gel. Poderia me informar os horários disponíveis?" },
-  { name: "Pedicure", desc: "inventar algo praca", price: "R$25", icon: "◈", duration: "40 min", wa: "Olá! Gostaria de agendar uma Pedicure. Poderia me informar os horários disponíveis?" },
-  { name: "Esmaltação tradicional", desc: "Cores vibrantes e acabamento preciso que dura dias.", price: "R$ 30", icon: "○", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação Tradicional. Poderia me informar os horários disponíveis?" },
+  { name: "Pedicure", price: "R$25", icon: "◈", duration: "40 min", wa: "Olá! Gostaria de agendar uma Pedicure. Poderia me informar os horários disponíveis?" },
+  { name: "Esmaltação tradicional", price: "R$ 30", icon: "○", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação Tradicional. Poderia me informar os horários disponíveis?" },
 ];
 
 const TESTIMONIALS = [
