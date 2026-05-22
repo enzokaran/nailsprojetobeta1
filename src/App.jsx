@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+[import { useState, useEffect, useRef } from "react";
 
 const NAV_LINKS = ["Início", "Serviços", "Galeria", "Sobre", "Contato"];
 
@@ -171,7 +171,7 @@ export default function NailStudio() {
         .insta-likes { color: white; font-family: 'Jost', sans-serif; font-size: 13px; opacity: 0; transition: opacity 0.3s; }
         .insta-item:hover .insta-likes { opacity: 1; }
         @media(max-width: 900px) and (orientation: portrait) {
-          .hero-content { padding-top: 560px !important; }
+          .hero-content { padding-top: 620px !important; }
         }
         @media(max-width: 768px) {
           .hero-title { font-size: clamp(44px, 12vw, 80px) !important; }
@@ -312,17 +312,17 @@ export default function NailStudio() {
             />
           </svg>
 
-          {/* Imagem da mão com flor — tamanho médio */}
+          {/* Imagem da mão com flor */}
           <img
-            src="/imagens/decorativo.png"
+            src="/imagens/fafa.jpeg"
             alt="Arte nas mãos"
             style={{
-              width: "min(220px, 60vw)",
+              width: "min(320px, 85vw)",
               height: "auto",
               display: "block",
-              opacity: 0.88,
-              marginTop: -8,
-              filter: "brightness(1.05)",
+              marginTop: -20,
+              mixBlendMode: "screen",
+              filter: "brightness(1.3) contrast(1.1)",
             }}
           />
         </div>
@@ -559,4 +559,4 @@ export default function NailStudio() {
       )}
     </div>
   );
-}
+}]
