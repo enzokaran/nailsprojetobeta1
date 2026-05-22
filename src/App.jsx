@@ -240,6 +240,127 @@ export default function NailStudio() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)" }} />
         </div>
 
+        {/* RIGHT SIDE — logo frame + nail art decoration */}
+        <div style={{
+          position: "absolute", right: 0, top: 0, bottom: 0,
+          width: "42%", display: "flex", alignItems: "center", justifyContent: "center",
+          pointerEvents: "none",
+          opacity: heroVisible ? 1 : 0, transition: "opacity 1.2s ease 0.6s",
+        }} className="hero-deco-panel">
+          <style>{`
+            @media(max-width: 900px){ .hero-deco-panel { display: none !important; } }
+          `}</style>
+
+          <svg viewBox="0 0 380 520" style={{ width: "min(340px, 36vw)", height: "auto" }}>
+            <defs>
+              <clipPath id="logoClip">
+                <circle cx="190" cy="170" r="108" />
+              </clipPath>
+              <linearGradient id="frameGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="rgba(255,255,255,0.45)" />
+                <stop offset="100%" stopColor="rgba(255,255,255,0.15)" />
+              </linearGradient>
+              <linearGradient id="nailG1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="rgba(255,255,255,0.55)" />
+                <stop offset="100%" stopColor="rgba(255,255,255,0.2)" />
+              </linearGradient>
+              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="8" floodColor="rgba(90,42,58,0.25)" />
+              </filter>
+            </defs>
+
+            {/* Outer decorative ring */}
+            <circle cx="190" cy="170" r="128" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+            {/* Scallop / dashed ring */}
+            <circle cx="190" cy="170" r="118" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" strokeDasharray="6 5" />
+
+            {/* Frosted glass circle — logo area */}
+            <circle cx="190" cy="170" r="108" fill="rgba(255,255,255,0.14)" filter="url(#softShadow)" />
+            <circle cx="190" cy="170" r="108" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
+
+            {/* Image placeholder — swap src for your logo */}
+            <image
+              href="/imagens/logo.jpeg"
+              x="82" y="62" width="216" height="216"
+              clipPath="url(#logoClip)"
+              preserveAspectRatio="xMidYMid slice"
+            />
+
+            {/* If no image, show inner text hint */}
+            <text x="190" y="158" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="15" fontWeight="300" fill="rgba(255,255,255,0.5)" letterSpacing="3">SUA LOGO</text>
+            <text x="190" y="178" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="11" fontWeight="300" fill="rgba(255,255,255,0.35)" letterSpacing="2">aqui</text>
+
+            {/* Sparkle top-right of circle */}
+            <g transform="translate(290, 68)">
+              <line x1="0" y1="-12" x2="0" y2="12" stroke="rgba(255,255,255,0.75)" strokeWidth="1.2" />
+              <line x1="-12" y1="0" x2="12" y2="0" stroke="rgba(255,255,255,0.75)" strokeWidth="1.2" />
+              <line x1="-7" y1="-7" x2="7" y2="7" stroke="rgba(255,255,255,0.45)" strokeWidth="0.9" />
+              <line x1="7" y1="-7" x2="-7" y2="7" stroke="rgba(255,255,255,0.45)" strokeWidth="0.9" />
+            </g>
+            <g transform="translate(310, 52)">
+              <line x1="0" y1="-6" x2="0" y2="6" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" />
+              <line x1="-6" y1="0" x2="6" y2="0" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" />
+            </g>
+            <g transform="translate(275, 55)">
+              <line x1="0" y1="-4" x2="0" y2="4" stroke="rgba(255,255,255,0.4)" strokeWidth="0.8" />
+              <line x1="-4" y1="0" x2="4" y2="0" stroke="rgba(255,255,255,0.4)" strokeWidth="0.8" />
+            </g>
+
+            {/* ── NAIL ART ILLUSTRATION ── */}
+            {/* 5 nails in a gentle arc at the bottom */}
+            {/* Nail 1 – leftmost, tilted */}
+            <g transform="translate(72, 380) rotate(-22)">
+              <rect x="-13" y="-52" width="26" height="58" rx="13" fill="rgba(255,255,255,0.22)" />
+              <rect x="-13" y="-52" width="26" height="58" rx="13" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="1" />
+              <ellipse cx="0" cy="-38" rx="10" ry="5" fill="rgba(255,255,255,0.18)" />
+            </g>
+            {/* Nail 2 */}
+            <g transform="translate(118, 348) rotate(-10)">
+              <rect x="-14" y="-58" width="28" height="64" rx="14" fill="rgba(255,255,255,0.22)" />
+              <rect x="-14" y="-58" width="28" height="64" rx="14" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="1" />
+              <ellipse cx="0" cy="-43" rx="11" ry="5" fill="rgba(255,255,255,0.18)" />
+            </g>
+            {/* Nail 3 – center, tallest */}
+            <g transform="translate(168, 338) rotate(0)">
+              <rect x="-15" y="-64" width="30" height="70" rx="15" fill="rgba(255,255,255,0.26)" />
+              <rect x="-15" y="-64" width="30" height="70" rx="15" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.2" />
+              <ellipse cx="0" cy="-48" rx="12" ry="6" fill="rgba(255,255,255,0.22)" />
+              {/* small heart on center nail */}
+              <text x="0" y="-18" textAnchor="middle" fontSize="12" fill="rgba(255,255,255,0.55)">♥</text>
+            </g>
+            {/* Nail 4 */}
+            <g transform="translate(218, 345) rotate(10)">
+              <rect x="-14" y="-58" width="28" height="64" rx="14" fill="rgba(255,255,255,0.22)" />
+              <rect x="-14" y="-58" width="28" height="64" rx="14" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="1" />
+              <ellipse cx="0" cy="-43" rx="11" ry="5" fill="rgba(255,255,255,0.18)" />
+            </g>
+            {/* Nail 5 – rightmost */}
+            <g transform="translate(262, 372) rotate(22)">
+              <rect x="-11" y="-46" width="22" height="52" rx="11" fill="rgba(255,255,255,0.22)" />
+              <rect x="-11" y="-46" width="22" height="52" rx="11" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="1" />
+              <ellipse cx="0" cy="-33" rx="9" ry="4" fill="rgba(255,255,255,0.18)" />
+            </g>
+
+            {/* Small sparkles near nails */}
+            <g transform="translate(50, 345)">
+              <line x1="0" y1="-7" x2="0" y2="7" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" />
+              <line x1="-7" y1="0" x2="7" y2="0" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" />
+            </g>
+            <g transform="translate(300, 350)">
+              <line x1="0" y1="-5" x2="0" y2="5" stroke="rgba(255,255,255,0.45)" strokeWidth="0.9" />
+              <line x1="-5" y1="0" x2="5" y2="0" stroke="rgba(255,255,255,0.45)" strokeWidth="0.9" />
+            </g>
+
+            {/* Thin line separating circle from nails */}
+            <line x1="90" y1="295" x2="290" y2="295" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" />
+
+            {/* Tiny dot accents */}
+            <circle cx="190" cy="305" r="2" fill="rgba(255,255,255,0.3)" />
+            <circle cx="170" cy="308" r="1.2" fill="rgba(255,255,255,0.2)" />
+            <circle cx="210" cy="308" r="1.2" fill="rgba(255,255,255,0.2)" />
+          </svg>
+        </div>
+
         {/* Content */}
         <div style={{ position: "relative", zIndex: 2, padding: "0 8vw", maxWidth: 720 }}>
           <div style={{ opacity: heroVisible ? 1 : 0, transform: heroVisible ? "none" : "translateY(20px)", transition: "all 0.8s ease 0.2s", marginBottom: 28 }}>
