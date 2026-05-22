@@ -17,10 +17,10 @@ const TESTIMONIALS = [
 ];
 
 const GALLERY_ITEMS = [
-  { id: 1, color: "#f4c2cc", label: "Nude Rosé", size: "normal", img: "/imagens/unha.png" },
-  { id: 2, color: "#e8d5c4", label: "Champagne", size: "normal", img: "/imagens/unha1.png" },
-  { id: 3, color: "#c9a9b4", label: "Mauve Dreams", size: "normal", img: "/imagens/unha2.png" },
-  { id: 4, color: "#f7e8e8", label: "Blush Bridal", size: "normal", img: "/imagens/unha3.png" },
+  { id: 1, color: "#f4c2cc", size: "normal", img: "/imagens/unha.png" },
+  { id: 2, color: "#e8d5c4", size: "normal", img: "/imagens/unha1.png" },
+  { id: 3, color: "#c9a9b4", size: "normal", img: "/imagens/unha2.png" },
+  { id: 4, color: "#f7e8e8", size: "normal", img: "/imagens/unha3.png" },
 ];
 
 const INSTAGRAM_ITEMS = [
