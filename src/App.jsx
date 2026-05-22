@@ -171,7 +171,7 @@ export default function NailStudio() {
         .insta-likes { color: white; font-family: 'Jost', sans-serif; font-size: 13px; opacity: 0; transition: opacity 0.3s; }
         .insta-item:hover .insta-likes { opacity: 1; }
         @media(max-width: 900px) and (orientation: portrait) {
-          .hero-content { padding-top: 620px !important; }
+          .hero-content { padding-top: 300px !important; }
         }
         @media(max-width: 768px) {
           .hero-title { font-size: clamp(44px, 12vw, 80px) !important; }
@@ -243,7 +243,7 @@ export default function NailStudio() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)" }} />
         </div>
 
-        {/* RIGHT SIDE — logo frame + nail art decoration */}
+        {/* RIGHT SIDE — logo */}
         <div style={{
           position: "absolute", right: 0, top: 0, bottom: 0,
           width: "42%", display: "flex", alignItems: "center", justifyContent: "center",
@@ -256,73 +256,40 @@ export default function NailStudio() {
             @media(max-width: 900px) and (orientation: landscape){ .hero-deco-panel { display: flex !important; } }
           `}</style>
 
-          <svg viewBox="0 0 380 340" style={{ width: "min(340px, 36vw)", height: "auto" }}>
-            <defs>
-              <clipPath id="logoClip">
-                <circle cx="190" cy="170" r="140" />
-              </clipPath>
-              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="rgba(90,42,58,0.3)" />
-              </filter>
-            </defs>
-
-            {/* Frosted glass circle — logo area */}
-            <circle cx="190" cy="170" r="140" fill="rgba(255,255,255,0.14)" filter="url(#softShadow)" />
-            <circle cx="190" cy="170" r="140" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" />
-
-            {/* Logo image */}
-            <image
-              href="/imagens/logo.jpeg"
-              x="50" y="30" width="280" height="280"
-              clipPath="url(#logoClip)"
-              preserveAspectRatio="xMidYMid slice"
-            />
-          </svg>
+          <img
+            src="/imagens/logo.jpeg"
+            alt="By Manu Nails"
+            style={{
+              width: "min(260px, 30vw)",
+              height: "min(260px, 30vw)",
+              objectFit: "cover",
+              borderRadius: "50%",
+              display: "block",
+            }}
+          />
         </div>
 
-        {/* Mobile portrait logo + hand image — only shown on narrow/portrait screens */}
+        {/* Mobile portrait logo — only shown on narrow/portrait screens */}
         <style>{`
           .hero-mobile-logo { display: none; }
           @media(max-width: 900px) and (orientation: portrait){ .hero-mobile-logo { display: flex !important; } }
           @media(max-width: 900px) and (orientation: landscape){ .hero-mobile-logo { display: none !important; } }
         `}</style>
         <div className="hero-mobile-logo" style={{
-          position: "absolute", top: "60px", left: 0, right: 0,
+          position: "absolute", top: "70px", left: 0, right: 0,
           flexDirection: "column", justifyContent: "flex-start", alignItems: "center",
           opacity: heroVisible ? 1 : 0, transition: "opacity 1.2s ease 0.6s",
-          pointerEvents: "none", zIndex: 2, gap: 0,
+          pointerEvents: "none", zIndex: 2,
         }}>
-          {/* Logo grande */}
-          <svg viewBox="0 0 380 340" style={{ width: "min(290px, 78vw)", height: "auto" }}>
-            <defs>
-              <clipPath id="logoClipMobile">
-                <circle cx="190" cy="170" r="140" />
-              </clipPath>
-              <filter id="softShadowMobile" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="rgba(90,42,58,0.3)" />
-              </filter>
-            </defs>
-            <circle cx="190" cy="170" r="140" fill="rgba(255,255,255,0.14)" filter="url(#softShadowMobile)" />
-            <circle cx="190" cy="170" r="140" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" />
-            <image
-              href="/imagens/logo.jpeg"
-              x="50" y="30" width="280" height="280"
-              clipPath="url(#logoClipMobile)"
-              preserveAspectRatio="xMidYMid slice"
-            />
-          </svg>
-
-          {/* Imagem da mão com flor */}
           <img
-            src="/imagens/fafa.jpeg"
-            alt="Arte nas mãos"
+            src="/imagens/logo.jpeg"
+            alt="By Manu Nails"
             style={{
-              width: "min(320px, 85vw)",
-              height: "auto",
+              width: "min(160px, 42vw)",
+              height: "min(160px, 42vw)",
+              objectFit: "cover",
+              borderRadius: "50%",
               display: "block",
-              marginTop: -20,
-              mixBlendMode: "screen",
-              filter: "brightness(1.3) contrast(1.1)",
             }}
           />
         </div>
