@@ -240,25 +240,14 @@ export default function NailStudio() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)" }} />
         </div>
 
-        {/* Logo centered */}
-        <div style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          zIndex: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          pointerEvents: "none",
-          width: "clamp(200px, 28vw, 340px)",
-          opacity: 0.3,
-        }}>
-          <img src="/logo.jpeg" alt="By Manu Nails Logo" style={{ width: "100%", height: "auto", borderRadius: "50%", display: "block" }} />
-        </div>
-
         {/* Content */}
-        <div style={{ position: "relative", zIndex: 2, padding: "0 8vw", maxWidth: 720 }}>
+        <div style={{ position: "relative", zIndex: 2, padding: "0 8vw", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+
+          {/* Logo */}
+          <div style={{ opacity: heroVisible ? 1 : 0, transform: heroVisible ? "none" : "translateY(20px)", transition: "all 0.8s ease 0.1s", marginBottom: 32 }}>
+            <img src="/imagens/logo.jpeg" alt="By Manu Nails Logo" style={{ width: "clamp(140px, 22vw, 220px)", height: "clamp(140px, 22vw, 220px)", borderRadius: "50%", objectFit: "cover", display: "block" }} />
+          </div>
+
           <div style={{ opacity: heroVisible ? 1 : 0, transform: heroVisible ? "none" : "translateY(20px)", transition: "all 0.8s ease 0.2s", marginBottom: 28 }}>
             <span className="hero-tag">✦ Nail Studio Premium ✦</span>
           </div>
