@@ -170,6 +170,9 @@ export default function NailStudio() {
         .insta-item:hover .insta-overlay { background: rgba(90,42,58,0.35); }
         .insta-likes { color: white; font-family: 'Jost', sans-serif; font-size: 13px; opacity: 0; transition: opacity 0.3s; }
         .insta-item:hover .insta-likes { opacity: 1; }
+        @media(max-width: 900px) and (orientation: portrait) {
+          .hero-content { padding-top: 260px !important; }
+        }
         @media(max-width: 768px) {
           .hero-title { font-size: clamp(44px, 12vw, 80px) !important; }
           .services-grid { grid-template-columns: 1fr !important; }
@@ -249,6 +252,8 @@ export default function NailStudio() {
         }} className="hero-deco-panel">
           <style>{`
             @media(max-width: 900px){ .hero-deco-panel { display: none !important; } }
+            @media(max-width: 900px) and (orientation: portrait){ .hero-deco-panel { display: none !important; } }
+            @media(max-width: 900px) and (orientation: landscape){ .hero-deco-panel { display: flex !important; } }
           `}</style>
 
           <svg viewBox="0 0 380 520" style={{ width: "min(340px, 36vw)", height: "auto" }}>
@@ -361,8 +366,42 @@ export default function NailStudio() {
           </svg>
         </div>
 
+        {/* Mobile portrait logo — only shown on narrow/portrait screens */}
+        <style>{`
+          .hero-mobile-logo { display: none; }
+          @media(max-width: 900px) and (orientation: portrait){ .hero-mobile-logo { display: flex !important; } }
+          @media(max-width: 900px) and (orientation: landscape){ .hero-mobile-logo { display: none !important; } }
+        `}</style>
+        <div className="hero-mobile-logo" style={{
+          position: "absolute", top: "80px", left: 0, right: 0,
+          justifyContent: "center", alignItems: "center",
+          opacity: heroVisible ? 1 : 0, transition: "opacity 1.2s ease 0.6s",
+          pointerEvents: "none", zIndex: 2,
+        }}>
+          <svg viewBox="0 0 380 300" style={{ width: "min(240px, 60vw)", height: "auto" }}>
+            <defs>
+              <clipPath id="logoClipMobile">
+                <circle cx="190" cy="150" r="108" />
+              </clipPath>
+              <filter id="softShadowMobile" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="8" floodColor="rgba(90,42,58,0.25)" />
+              </filter>
+            </defs>
+            <circle cx="190" cy="150" r="128" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+            <circle cx="190" cy="150" r="118" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" strokeDasharray="6 5" />
+            <circle cx="190" cy="150" r="108" fill="rgba(255,255,255,0.14)" filter="url(#softShadowMobile)" />
+            <circle cx="190" cy="150" r="108" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
+            <image
+              href="/imagens/logo.jpeg"
+              x="82" y="42" width="216" height="216"
+              clipPath="url(#logoClipMobile)"
+              preserveAspectRatio="xMidYMid slice"
+            />
+          </svg>
+        </div>
+
         {/* Content */}
-        <div style={{ position: "relative", zIndex: 2, padding: "0 8vw", maxWidth: 720 }}>
+        <div className="hero-content" style={{ position: "relative", zIndex: 2, padding: "0 8vw", maxWidth: 720 }}>
           <div style={{ opacity: heroVisible ? 1 : 0, transform: heroVisible ? "none" : "translateY(20px)", transition: "all 0.8s ease 0.2s", marginBottom: 28 }}>
             <span className="hero-tag">✦ Nail Studio Premium ✦</span>
           </div>
