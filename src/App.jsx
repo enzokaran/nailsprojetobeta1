@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 const NAV_LINKS = ["Início", "Serviços", "Galeria", "Sobre", "Contato"];
 
 const SERVICES = [
-  { name: "Molde f1", desc: "Acabamento impecável com durabilidade ate 15 dias,manutenção 55$.", price: "R$ 75", icon: "◆", duration: "de 60 min a 1:20q", wa: "Olá! Gostaria de agendar um horário para Molde F1. Poderia me informar os horários disponíveis?" },
+  { name: "Molde f1", desc: "Acabamento impecável com durabilidade ate 15 dias,manutenção 55$.", price: "R$ 75", icon: "◆", duration: "de 60 min a 1:20", wa: "Olá! Gostaria de agendar um horário para Molde F1. Poderia me informar os horários disponíveis?" },
   { name: "Esmaltação em gel", desc: "manutenção 45$.", price: "R$ 50", icon: "◇", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação em Gel. Poderia me informar os horários disponíveis?" },
   { name: "Pedicure", price: "R$25", icon: "◈", duration: "40 min", wa: "Olá! Gostaria de agendar uma Pedicure. Poderia me informar os horários disponíveis?" },
   { name: "Esmaltação tradicional", price: "R$ 30", icon: "○", duration: "60 min", wa: "Olá! Gostaria de agendar uma Esmaltação Tradicional. Poderia me informar os horários disponíveis?" },
